@@ -1,16 +1,18 @@
-import { registerLocaleData, APP_BASE_HREF } from "@angular/common";
-import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from "@angular/common/http";
-import { NgModule, APP_INITIALIZER } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { NgSelectModule } from "@ng-select/ng-select";
-import { LibUiKitModule } from "./_lib/ui-kit/ui-kit.module";
-import { CONSTANTS } from "./_shared/constants";
-import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
-import { ConfigService } from "./_core/services/config.service";
-import { ContentComponent } from "./_core/components/content/content.component";
-import { BrowserModule } from "@angular/platform-browser";
+import { registerLocaleData, APP_BASE_HREF } from '@angular/common';
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { LibUiKitModule } from './_lib/ui-kit/ui-kit.module';
+import { CONSTANTS } from './_shared/constants';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { ConfigService } from './_core/services/config.service';
+import { ContentComponent } from './_core/components/content/content.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { CookieService } from 'ngx-cookie-service';
+import { TestCookieComponent } from './_core/components/test-cookie/test-cookie.component';
 
 
 require('moment/moment.js');
@@ -23,6 +25,7 @@ export function appInit(appConfigService: ConfigService) {
     declarations: [
         AppComponent,
         ContentComponent,
+        TestCookieComponent,
     ],
     imports: [
         BrowserModule,
@@ -35,6 +38,7 @@ export function appInit(appConfigService: ConfigService) {
 
     ],
     providers: [
+        [CookieService],
         { provide: APP_BASE_HREF, useValue: '/' },
         { provide: APP_INITIALIZER, useFactory: appInit, multi: true, deps: [ConfigService] }
 
