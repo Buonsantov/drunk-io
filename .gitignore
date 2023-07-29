@@ -9,6 +9,10 @@
 
 # dependencies
 /node_modules
+.angular/*
+/.angular
+
+
 
 # profiling files
 chrome-profiler-events*.json
@@ -43,3 +47,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
