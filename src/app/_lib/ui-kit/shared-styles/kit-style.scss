@@ -1,0 +1,288 @@
+@import "./colors.scss";
+
+.fade.modal.show {
+  z-index: 999;
+}
+.indexHeader {
+  z-index: 888;
+}
+.modal-backdrop.show {
+  z-index: 888 !important;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1055;
+  overflow-y: hidden !important;
+}
+
+/* CIRCLE */
+.circleImg {
+  width: 14px;
+  height: 14px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: #f5a623;
+  position: relative;
+  top: 1.18rem;
+  left: -1rem;
+  margin-left: -3px;
+  margin-top: -0.7rem;
+}
+.circleImgGreen {
+  width: 14px;
+  height: 14px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: green;
+  position: relative;
+  top: 1.18rem;
+  left: -1rem;
+  margin-left: -3px;
+  margin-top: -0.7rem;
+}
+.circleImgRed {
+  width: 14px;
+  height: 14px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: $my-error;
+  position: relative;
+  top: 1.18rem;
+  left: -1rem;
+  margin-left: -3px;
+  margin-top: -0.7rem;
+}
+
+.cerchio-vuoto {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4px;
+}
+
+/* BTN SCL -> hover su btn more item*/
+.btn-scl {
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  width: 30px !important;
+  height: 30px !important;
+  text-align: -webkit-center;
+}
+
+.btn-scl[aria-expanded="true"],
+.btn-scl:hover {
+  border-radius: 50%;
+  background-color: $my-hover-list;
+  svg {
+    fill: white !important;
+  }
+}
+
+/* INVALID INPUT */
+.invalid-input {
+  color: $my-error !important;
+  font-size: 0.8rem !important;
+  font-weight: 400;
+}
+.bg-danger {
+  background-color: $my-error !important;
+}
+
+.invalid-checkbox-label {
+  color: $my-error !important;
+}
+
+/* CLICK CSS */
+.clickable {
+  cursor: pointer;
+}
+
+/* COLLAPSE */
+.collapse-div {
+  border: 1px solid #e3e4e6;
+}
+
+.swiper-pagination-bullet-active {
+  background: $my-primary-btn !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: $my-primary-btn !important;
+}
+
+/* font-family */
+body,
+div,
+p,
+a,
+i,
+b,
+strong,
+span,
+li,
+th,
+tr,
+td,
+ul,
+table,
+.card-text,
+.card-body,
+.card .card-body .card-text,
+.card .it-card-footer .card-signature {
+  font-family: "Titillium Web", sans-serif;
+}
+
+.it-card-footer {
+  margin: 0;
+}
+
+li:hover {
+  background-color: $my-hover-list !important;
+}
+
+.popover .popover-header {
+  color: $my-secondary !important;
+}
+
+/* TABLE */
+.table > :not(caption) > * > * {
+  padding: 1rem 0.5rem;
+}
+.table {
+  color: $my-table-grigio;
+}
+tr {
+  color: $my-table-grigio;
+}
+td {
+  color: $my-text;
+}
+
+/* CLOSABLE BTN ALERT */
+
+.alert-dismissible .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.8rem 1rem;
+  color: inherit;
+}
+button.close {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+.close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+}
+
+/* FIX TOASTER */
+.bg-danger .toast-body {
+  background-color: $my-error !important;
+  padding: 0.9rem;
+  border-radius: 4px;
+}
+.bg-success .toast-body {
+  background-color: $my-success !important;
+  padding: 0.9rem;
+  border-radius: 4px;
+}
+.bg-warning .toast-body {
+  background-color: $my-warning !important;
+  padding: 0.9rem;
+  border-radius: 4px;
+}
+.ngb-toasts {
+  line-height: 0.555 !important;
+}
+
+/* DROPDOWN */
+.link-list-wrapper h3,
+.link-list-wrapper .h3 {
+  padding: 1px 20px;
+}
+.link-list-wrapper ul li a {
+  padding: 1px 20px;
+}
+
+/* FORM ACTIVE */
+.form-group label {
+  transform: translateY(-75%);
+  font-size: 0.777rem;
+  overflow: visible;
+}
+
+.pagination .page-item.disabled a.page-link {
+  color: #5b6f82 !important;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.pagination li:hover.disabled {
+  background-color: transparent !important;
+}
+
+.btn {
+  min-height: 40px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: $my-primary-btn;
+    border-color:  $my-primary-btn;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color:  $my-primary-btn;
+  border-color:  $my-primary-btn;
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: $my-warning;
+  border-color: $my-warning;
+}
+
+.btn-outline-warning:hover {
+  color: #fff;
+  background-color:  $my-warning;
+  border-color:  $my-warning;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: $my-success;
+  border-color: $my-success;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color:  $my-success;
+  border-color:  $my-success;
+}
+.btn-danger {
+  color: #fff;
+  background-color: $my-error;
+  border-color: $my-error;
+}
+
+.btn-outline-danger:hover {
+  color: #fff;
+  background-color:  $my-error;
+  border-color:  $my-error;
+}

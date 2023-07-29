@@ -1,0 +1,38 @@
+:host {
+    position: fixed;
+    top: auto !important;
+    bottom: 0 !important;
+    right: auto !important;
+    left: 0 !important;
+    margin: 0.5em;
+    z-index: 9200;
+    color: white;
+    font-weight: bold;
+}
+ngb-toast {
+    margin: 0.5em;
+    border-radius: 0.25rem;
+}
+ngb-toast.text-light {
+    color: white !important;
+}
+
+.toast {
+    max-width: 100%;
+    width: auto;
+}
+
+@media (max-width: 767px) {
+    .toast {
+        max-width: 100%;
+    }
+}
+
+.separetor {
+    border-left: 1px solid #ffffff30;
+    margin: -10px 5px;
+}
+
+.txtMessage {
+    align-self: center;
+}

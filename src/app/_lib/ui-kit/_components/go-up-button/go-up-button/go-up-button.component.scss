@@ -1,0 +1,71 @@
+@import "../../../shared-styles/kit-style.scss";
+
+.goToTop {
+    opacity: 80%;
+
+    position: fixed !important;
+
+    bottom: 70px !important;
+
+    right: 2vw !important;
+
+    width: 0px;
+
+    height: 0px;
+
+    border-radius: 50px;
+
+    border-width: 0px;
+
+    background: transparent;
+
+    transition: width 0.5s, height 0.5s;
+
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.goToTop-zoom {
+    width: 64px;
+
+    height: 64px;
+
+    background: $my-primary-btn;
+
+    z-index: 100;
+}
+
+.goToTop-zoom svg {
+    display: unset !important;
+    fill: white !important;
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    stroke: white;
+}
+
+.goToTop svg {
+    display: none;
+    fill: transparent;
+
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

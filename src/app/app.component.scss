@@ -1,0 +1,14 @@
+@media screen and (max-width: 991px) {
+    .container-app-fix-sm {
+        margin-left: 5px!important;
+        margin-right: 5px!important;
+        padding-top: 100px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .container-app-fix-sm {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        padding-top: 30px;
+    }
+}
