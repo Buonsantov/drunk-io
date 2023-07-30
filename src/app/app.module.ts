@@ -13,7 +13,8 @@ import { ContentComponent } from './_core/components/content/content.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { CookieService } from 'ngx-cookie-service';
 import { TestCookieComponent } from './_core/components/test-cookie/test-cookie.component';
-
+import { HeaderComponent } from './_core/components/header/header.component';
+import { FooterComponent } from './_core/components/footer/footer.component';
 
 require('moment/moment.js');
 
@@ -26,6 +27,8 @@ export function appInit(appConfigService: ConfigService) {
         AppComponent,
         ContentComponent,
         TestCookieComponent,
+        HeaderComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,
