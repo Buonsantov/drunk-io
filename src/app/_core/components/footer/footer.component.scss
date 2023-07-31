@@ -1,0 +1,11 @@
+@import 'src/variables.scss';
+
+footer{
+    height: $footer-height;
+    background-color: rgb(72, 72, 104);
+
+     ul li{
+        list-style-type: none;
+
+    }
+}
