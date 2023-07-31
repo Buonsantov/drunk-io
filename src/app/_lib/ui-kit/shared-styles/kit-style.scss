@@ -286,3 +286,7 @@ button.close {
   background-color:  $my-error;
   border-color:  $my-error;
 }
+
+.custom-navbar-toggler svg {
+  fill: $my-primary-btn !important;
+}

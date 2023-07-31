@@ -33,12 +33,13 @@
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "node_modules/bootstrap/dist/",
-                "output": "/assets/bootstrap/"
+                "input": "./node_modules/bootstrap-italia/",
+                "output": "/bootstrap-italia/"
               }
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-italia/dist/css/bootstrap-italia.min.css",
               "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
@@ -49,7 +50,8 @@
             "scripts": [
               "node_modules/popper.js/dist/umd/popper.js",
               "node_modules/jquery/dist/jquery.slim.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"
             ]
           },
           "configurations": {
@@ -123,12 +125,13 @@
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "node_modules/bootstrap/dist/",
-                "output": "/assets/bootstrap/"
+                "input": "./node_modules/bootstrap-italia/",
+                "output": "/bootstrap-italia/"
               }
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-italia/dist/css/bootstrap-italia.min.css",
               "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
@@ -139,7 +142,8 @@
             "scripts": [
               "node_modules/popper.js/dist/umd/popper.js",
               "node_modules/jquery/dist/jquery.slim.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"
             ]
           }
         },
