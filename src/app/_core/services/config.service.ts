@@ -15,7 +15,7 @@ export class ConfigService {
   }
 
   public init(): Promise<any> {
-    const promise = this.httpClient.get<Config>(this.getPathApp(environment.configFile)).toPromise().then(
+    const promise = this.httpClient.get<Config>(environment.configFile).toPromise().then(
       async (data?: Config) => {
         if (data) {
           this.config = data;
@@ -26,11 +26,6 @@ export class ConfigService {
       },
     );
     return promise;
-  }
-
-
-  getPathApp(path: string) {
-    return (path);
   }
 
   public getConfig(): Config {

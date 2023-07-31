@@ -1,13 +1,31 @@
-@import 'src/variables.scss';
+@import 'kit-style.scss';
 
-.navbar {
-    height: $navbar_height;
+.navbar-expand-lg {
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+.navbar .navbar-collapsable .navbar-nav li a.nav-link {
+    font-weight: 400;
+    padding: 13px 24px;
+    color: $my-text;
+    border-bottom: 3px solid #ffff;
+}
+
+.logo-Container {
+    height: 60px;
+    padding: 20px;
+
+    .fa-wine-glass {
+        font-size: 40px;
+        color: white;
+        font-family: 'Font Awesome 6 Free';
+    }
+}
 
 li.nav-item:hover {
     border-bottom: 2px solid white;
-    background-color: $primary-bg !important;
+    background-color: $my-primary !important;
 
     .nav-link {
         text-decoration: none !important;
@@ -15,57 +33,71 @@ li.nav-item:hover {
 }
 
 .custom-navbar-toggler svg {
-    fill: #ffff !important;
+    fill: $my-text !important;
     margin-left: 20px;
 }
 
 /* RESPONSIVE SECTION */
 
-@media(max-width: 576px) {
+@media (min-width: 576px) {
     .navbar-expand-lg {
         flex-wrap: nowrap;
         justify-content: flex-start;
-        background-color: $primary-bg !important;
+        background-color: $white !important;
+        
+        .menu-wrapper {
+            background-color: $my-primary !important;
+        }
     }
 
     .navbar .navbar-collapsable .navbar-nav li a.nav-link:hover {
         color: white !important;
-    }
-
-    .it-header-navbar-wrapper {
-        background-color: $primary-bg !important;
     }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .navbar-expand-lg {
         flex-wrap: nowrap;
         justify-content: flex-start;
-        background-color: $primary-bg !important;
+        background-color: $white !important;
+    }
+
+    .it-header-navbar-wrapper {
+        background-color: $my-primary !important;
     }
 
     .navbar .navbar-collapsable .navbar-nav li a.nav-link:hover {
         color: white !important;
     }
-
-    .it-header-navbar-wrapper {
-        background-color: $primary-bg !important;
-    }
-
 }
 
-@media(max-width: 992px) {
-    .navbar-expand-lg {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        background-color: $primary-bg !important;
+@media (min-width: 768px) {
+    .it-header-navbar-wrapper {
+        background-color: $my-primary !important;
     }
 
     .navbar .navbar-collapsable .navbar-nav li a.nav-link:hover {
         color: white !important;
     }
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        background-color: $white !important;
+        .menu-wrapper {
+            background: $white !important;
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+        }
+    }
 
     .it-header-navbar-wrapper {
-        background-color: $primary-bg !important;
+        background-color: $my-primary !important;
+        padding-left: 24px;
+    }
+
+    .navbar .navbar-collapsable .navbar-nav li a.nav-link:hover {
+        color: white !important;
     }
 }
