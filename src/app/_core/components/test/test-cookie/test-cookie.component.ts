@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CookieDrunkService } from '../../services/cookie.service';
-import { User } from '../../model/user-model';
+import { User } from 'src/app/_core/model/user-model';
+import { CookieDrunkService } from 'src/app/_core/services/cookie.service';
+
 
 @Component({
   selector: 'app-test-cookie',
