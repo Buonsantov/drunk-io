@@ -1,15 +1,71 @@
 @import 'src/variables.scss';
 
-.navbar{
+.navbar {
     height: $navbar_height;
+}
 
-    .container-fluid > .logoContainer > i, p{
-        font-size: 30px;
-        }
 
-    a{
-        text-decoration: none;
-        color: rgb(71, 70, 70);
-        
+li.nav-item:hover {
+    border-bottom: 2px solid white;
+    background-color: $primary-bg !important;
+
+    .nav-link {
+        text-decoration: none !important;
     }
-} 
+}
+
+.custom-navbar-toggler svg {
+    fill: #ffff !important;
+    margin-left: 20px;
+}
+
+/* RESPONSIVE SECTION */
+
+@media(max-width: 576px) {
+    .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        background-color: $primary-bg !important;
+    }
+
+    .navbar .navbar-collapsable .navbar-nav li a.nav-link:hover {
+        color: white !important;
+    }
+
+    .it-header-navbar-wrapper {
+        background-color: $primary-bg !important;
+    }
+}
+
+@media(max-width: 768px) {
+    .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        background-color: $primary-bg !important;
+    }
+
+    .navbar .navbar-collapsable .navbar-nav li a.nav-link:hover {
+        color: white !important;
+    }
+
+    .it-header-navbar-wrapper {
+        background-color: $primary-bg !important;
+    }
+
+}
+
+@media(max-width: 992px) {
+    .navbar-expand-lg {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        background-color: $primary-bg !important;
+    }
+
+    .navbar .navbar-collapsable .navbar-nav li a.nav-link:hover {
+        color: white !important;
+    }
+
+    .it-header-navbar-wrapper {
+        background-color: $primary-bg !important;
+    }
+}
