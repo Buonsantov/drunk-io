@@ -1,9 +1,14 @@
 @import 'kit-style.scss';
 
-/* footer {
-    position: fixed;
-    bottom: 0;
-} */
+.link-list li{
+    text-decoration: none;
+    color: white;
+}
+
+.link-list li:hover{
+    background-color: $my-primary !important;
+    text-decoration: underline;
+}
 
 /* Top */
 
