@@ -1,14 +1,21 @@
-@import 'kit-style.scss';
+@import "kit-style.scss";
 
-.top-header-slogan{
+.top-header-slogan {
     padding-left: 30px;
+    width: max-content;
+    align-self: center;
 }
 
 .navbar-expand-lg {
     height: 60px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow:
+        rgba(0, 0, 0, 0.16) 0px 3px 6px,
+        rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
-
+.avatar.size-md .icon {
+    height: 20px;
+    width: 20px;
+}
 .navbar .navbar-collapsable .navbar-nav li a.nav-link {
     font-weight: 400;
     padding: 13px 24px;
@@ -18,22 +25,25 @@
 
 .logo-Container {
     height: 60px;
-    padding: 20px;
+    padding: 15px;
 
     .fa-wine-glass {
-        font-size: 40px;
+        font-size: 25px;
         color: white;
-        font-family: 'Font Awesome 6 Free';
+        font-family: "Font Awesome 6 Free";
     }
 }
 
-li.nav-item:hover {
-    border-bottom: 2px solid white;
-    background-color: $my-primary !important;
 
-    .nav-link {
-        text-decoration: none !important;
-    }
+.drunk-text-nav {
+    color: $my-primary;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+li.nav-item:hover {
+    background-color:transparent !important;
 }
 
 .custom-navbar-toggler svg {
@@ -41,35 +51,32 @@ li.nav-item:hover {
     margin-left: 30px;
 }
 
+#user-section{
+    margin-top: 40px;
+    width: 100%;
+    text-align-last: center;
+}
+
+.dettaglio-user{
+    color: #6e6e6e;
+    font-size: 14px;
+}
+
 /* RESPONSIVE SECTION */
 
-@media (min-width: 576px) {
-    .navbar-expand-lg {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        background-color: $white !important;
-        
-        .menu-wrapper {
-            background-color: $white !important;
-        }
+@media (max-width: 991px) {
+    .logoWrapper {
+        height: 50px;
     }
 
-    .drunk-text{
-        color: $white;
-    }
-
-    .navbar .navbar-collapsable .navbar-nav li a.nav-link:hover {
-        color: white !important;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .top-header{
+    .top-header {
         display: none !important;
     }
-    .drunk-text{
+    .drunk-text {
         color: $white;
+        font-size: 20px;
+        padding-top: 5px;
+        padding-left: 15px;
     }
 
     .navbar-expand-lg {
@@ -82,34 +89,29 @@ li.nav-item:hover {
         background-color: $my-primary !important;
     }
 
-    .navbar .navbar-collapsable .navbar-nav li a.nav-link:hover {
-        color: white !important;
-    }
-}
-
-@media (min-width: 768px) {
-
-    .top-header{
-        display: none !important;
+    .logo-Container {
+        padding-left: 25px;
     }
 
-    .drunk-text{
-        color: $white;
+    .logo-Container.fill-nav-mobile .fa-wine-glass {
+        font-size: 25px;
+        fill: $my-primary!important;
+        color: $my-primary!important;
+        font-family: "Font Awesome 6 Free";
     }
 
-    .it-header-navbar-wrapper {
-        background-color: $my-primary !important;
+    .user-center{
+        text-align-last: center;
+        margin-top: 5px;
+        color: $my-primary!important;
     }
-
-    .navbar .navbar-collapsable .navbar-nav li a.nav-link:hover {
-        color: white !important;
-    }
+    
 }
 
 @media (min-width: 992px) {
-
-    .top-header{
+    .top-header {
         display: block !important;
+        height: 50px;
     }
     .navbar-expand-lg {
         flex-wrap: nowrap;
@@ -117,21 +119,24 @@ li.nav-item:hover {
         background-color: $white !important;
         .menu-wrapper {
             background: $white !important;
-            
         }
     }
-    .logoWrapper{
+    .logoWrapper {
         background-color: $white;
         margin-left: 0;
+        height: 75px;
 
         .fa-wine-glass {
             font-size: 40px;
             color: $my-primary;
-            font-family: 'Font Awesome 6 Free';
+            font-family: "Font Awesome 6 Free";
         }
 
-        .drunk-text{
+        .drunk-text {
             color: $my-primary;
+            font-size: 20px;
+            padding-top: 10px;
+            padding-left: 15px;
         }
     }
     .it-header-navbar-wrapper {
@@ -139,7 +144,7 @@ li.nav-item:hover {
         padding-left: 24px;
     }
 
-    .navbar .navbar-collapsable .navbar-nav li a.nav-link:hover {
-        color: white !important;
-    }
+
 }
+
+

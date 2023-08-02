@@ -2,15 +2,27 @@ import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { User } from '../model/user-model';
 import { Users } from '../model/users-model';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CookieDrunkService {
 
+  private userSelezionato: BehaviorSubject<User>;
+
   constructor(
     private cookieService: CookieService,
-  ) { }
+  ) {
+    this.userSelezionato = new BehaviorSubject<any>(null);
+  }
+
+  getValueUser(): Observable<User> {
+    return this.userSelezionato.asObservable();
+  }
+  setValueUser(user: User): void {
+    this.userSelezionato.next(user);
+  }
 
   setUser(user: User) {
     let users = this.getUsers();
@@ -56,7 +68,7 @@ export class CookieDrunkService {
   }
 
 
-  getProfiloSelezionato() {
+  getProfiloSelezionato(): User | null {
     const users = this.getUsers();
     if (users && users?.utenti && users?.utenti?.length) {
       const user = users.utenti.filter((u: any) => u.profiloSelezionato === true);
@@ -78,6 +90,7 @@ export class CookieDrunkService {
           e.profiloSelezionato = false;
         });
         mod.profiloSelezionato = true;
+        this.setValueUser(mod);
         (users.utenti as Array<any>).splice(x, 1, mod);
         this.setUsers(users);
       }
