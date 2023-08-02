@@ -19,7 +19,7 @@ footer{
     }
 
     .link-container{
-        width: 500px;
+        width: 480px;
 
         a{
             text-decoration: none;
@@ -27,5 +27,21 @@ footer{
             
         }
         
+    }
+}
+
+@media (max-width: 568px) {
+    .link-container{
+        display: block !important;
+        
+    }
+
+    .footer-link{
+        border-right: 0 !important;
+    }
+
+    .row{
+        width: 100px;
+        margin: 0 auto;
     }
 }
