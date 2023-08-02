@@ -34,6 +34,10 @@ p.top-footer-title {
     .link-list, .top-footer-title {
         padding-left: 30px;  
     }
+
+    .link-container{
+        display: block !important;
+    }
     
 }
 
@@ -64,8 +68,8 @@ p.top-footer-title {
     }
 
     .link-container {
-        width: 450px;
-        display: block !important;
+        width: 450px; 
+        
 
         a {
             text-decoration: none;
@@ -74,7 +78,7 @@ p.top-footer-title {
     }
 
     .row {
-        width: 100px;
+        width: 450px;
         margin: 0 auto;
     }
 }
