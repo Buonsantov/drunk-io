@@ -16,7 +16,7 @@ export class TestCookieComponent implements OnInit{
   ngOnInit(): void {
     console.log('#[Cookie] Init');
     const user = new User();
-    user.nome = 'Vito';
+    user.nome = 'Vito Buonsanto';
     user.cookie = true;
     user.peso = 90;
     user.profiloSelezionato = true;
@@ -30,7 +30,7 @@ export class TestCookieComponent implements OnInit{
     const profilo = this.cookieDrunkService.getProfiloSelezionato();
     console.log('#[Cookie] Profilo Selezionato: ', profilo);
 
-    const vito = this.cookieDrunkService.getUser('Vito');
+    const vito = this.cookieDrunkService.getUser('Vito Buonsanto');
     console.log('#[Cookie] Profilo Vito: ', vito);
 
     vito.peso = 150;
@@ -40,13 +40,13 @@ export class TestCookieComponent implements OnInit{
 
 
     const user2 = new User();
-    user2.nome = 'Pina';
+    user2.nome = 'Pina carina';
     user2.cookie = true;
     user2.peso = 60;
     user2.profiloSelezionato = false;
     user2.sesso = 'F';
     this.cookieDrunkService.setUser(user2);
-    this.cookieDrunkService.setProfiloSelezionato('Pina');
+    this.cookieDrunkService.setProfiloSelezionato('Pina carina');
     const profiloSelezionato = this.cookieDrunkService.getProfiloSelezionato();
     console.log('#[Cookie] Profilo Selezionato: ', profiloSelezionato);
     const users2 = this.cookieDrunkService.getUsers();
