@@ -1,7 +1,11 @@
 <footer class="w-100">
-<div class="container-fluid">
-    <div class="row">
-        <template ></template>
+    <div class="container-fluid h-100">
+        <div class="row h-100 d-flex align-items-center justify-content-center">
+            <div class="d-flex link-container align-items-center justify-content-between">
+                <div *ngFor="let link of footerLink">
+                    <a href="#"><small class="footer-link">{{link}}</small></a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 </footer>

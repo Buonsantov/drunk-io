@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  name= "ciao";
+  footerLink: string[] = ['Features', 'About', 'Testimonials', 'Contact', 'Download'];
 }
