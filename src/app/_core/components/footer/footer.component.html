@@ -1,10 +1,39 @@
 <footer class="w-100">
-    <div class="container-fluid h-100">
-        <div class="row h-100 d-flex align-items-center justify-content-center">
-            <div class="d-flex link-container align-items-center justify-content-between">
-                <div *ngFor="let link of footerLink">
-                    <a href="#"><small class="footer-link">{{link}}</small></a>
+    <!-- TOP FOOTER -->
+    <div class="top-footer-wrapper">
+        <div class="container-fluid top-footer">
+            <div class="row w-100 h-100 d-flex justify-content-center">
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 text-white me-3">
+                    <p class="my-4 top-footer-title">CONTATTI</p>
+                    <ul class="link-list mb-4">
+                        <li class="mb-1">Telefono Verde Alcol 800 632000 - Ministero della Salute</li>
+                        <li class="mb-1">https://www.salute.gov.it/portale/alcol/homeAlcol.jsp</li>
+                        <li class="mb-1">Lorem ipsum dolor, sit.</li>
+                        <li class="mb-1">Lorem ipsum. </li>
+                    </ul>
                 </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 text-white">
+                    <p class="my-4 top-footer-title">QUICKLINKS</p>
+                    <ul class="link-list mb-4">
+                        <li class="mb-3">Servizi utili</li>
+
+                        <li class="mb-1">Certificato di autenticità.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM FOOTER -->
+    <div class="container-fluid bottom-footer py-2 h-100">
+        <div class="row ciao h-100 d-flex align-items-center justify-content-center">
+            <div class="d-flex link-container align-items-center justify-content-between">
+                
+                    <div *ngFor="let link of footerLink">
+                        <a href="#"><small class="footer-link col-sm-12 col-md-6 col-lg-2">{{link}}</small></a>
+                    </div>
+                
             </div>
         </div>
     </div>
