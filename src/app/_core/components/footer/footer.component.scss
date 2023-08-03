@@ -1,11 +1,11 @@
 @import 'kit-style.scss';
 
-.link-list li{
+.link-list li {
     text-decoration: none;
     color: white;
 }
 
-.link-list li:hover{
+.link-list li:hover {
     background-color: $my-primary !important;
     text-decoration: underline;
 }
@@ -31,14 +31,19 @@ p.top-footer-title {
         background-color: $my-primary;
     }
 
-    .link-list, .top-footer-title {
-        padding-left: 30px;  
+    .top-footer-title,
+    .link-container {
+        padding-left: 35px;
     }
 
-    .link-container{
+    .link-container {
         display: block !important;
+        width: 450px;
     }
-    
+
+  
+        
+
 }
 
 .link-list {
@@ -68,8 +73,8 @@ p.top-footer-title {
     }
 
     .link-container {
-        width: 450px; 
-        
+        width: 450px;
+
 
         a {
             text-decoration: none;
@@ -78,15 +83,16 @@ p.top-footer-title {
     }
 
     .row {
-        width: 450px;
+        width: 100%;
         margin: 0 auto;
     }
 }
 
 @media (min-width: 569px) {
-   
-    .link-list, .top-footer-title {
-        padding-left: 30px;  
+
+    .link-list,
+    .top-footer-title {
+        padding-left: 35px;
     }
-    
+
 }

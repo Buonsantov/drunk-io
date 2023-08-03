@@ -31,15 +31,14 @@ export class HeaderComponent implements OnInit {
     let dettaglio = '';
     switch (profilo.sesso) {
       case 'M':
-        dettaglio = 'Uomo ';
+        return dettaglio = 'Uomo ';
         break;
       case 'F':
-        dettaglio = 'Donna ';
+        return dettaglio = 'Donna ';
         break;
       default:
         break;
     }
-
     dettaglio = dettaglio + ' - ' + profilo.peso + ' Kg.';
     return dettaglio;
   }
