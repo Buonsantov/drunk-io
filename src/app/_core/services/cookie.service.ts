@@ -4,6 +4,7 @@ import { User } from '../model/user-model';
 import { Users } from '../model/users-model';
 import { BehaviorSubject, Observable } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +16,7 @@ export class CookieDrunkService {
     private cookieService: CookieService,
   ) {
     this.userSelezionato = new BehaviorSubject<any>(null);
+    
   }
 
   getValueUser(): Observable<User> {
@@ -41,10 +43,10 @@ export class CookieDrunkService {
     this.setUsers(users);
   }
 
-  getUser(nome: string) {
+  getUser(id: string) {
     const users = this.getUsers();
     if (users && users?.utenti && users?.utenti?.length) {
-      const user = users.utenti.filter((u: any) => u.nome === nome);
+      const user = users.utenti.filter((u: any) => u.id === id);
       if (user) {
         return user[0];
       }

@@ -1,5 +1,7 @@
 @import 'kit-style.scss';
 
+
+
 .link-list li {
     text-decoration: none;
     color: white;
@@ -33,13 +35,29 @@ p.top-footer-title {
 
     .top-footer-title,
     .link-container {
-        padding-left: 35px;
+        padding-left: 10px;
     }
 
     .link-container {
         display: block !important;
         width: 450px;
+
     }
+
+    .link-list{
+        padding-left: 10px; 
+    }
+
+    .linkWrapper{
+        justify-content: start !important;
+        padding-left: 0;
+    }
+
+    .bottomLinkContainer{
+
+    }
+
+    
 
   
         
@@ -74,6 +92,7 @@ p.top-footer-title {
 
     .link-container {
         width: 450px;
+        
 
 
         a {

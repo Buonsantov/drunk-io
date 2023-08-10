@@ -16,6 +16,7 @@ import { HeaderComponent } from './_core/components/header/header.component';
 import { FooterComponent } from './_core/components/footer/footer.component';
 import { TestModule } from './_core/components/test/test.module';
 
+
 require('moment/moment.js');
 
 export function appInit(appConfigService: ConfigService) {

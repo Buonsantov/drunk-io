@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieDrunkService } from '../../services/cookie.service';
 import { User } from '../../model/user-model';
+import { DrinkService } from '../../services/drink.service';
+import { Drink } from '../../model/drink-model';
+import { MyApiService } from 'src/app/my-api.service';
+
+
+
+
 
 @Component({
   selector: 'app-header',
@@ -10,13 +17,19 @@ import { User } from '../../model/user-model';
 export class HeaderComponent implements OnInit {
 
   user?: User | null;
+  drink?: Drink | null;
+  
 
   constructor(
     private cookieDrunkService: CookieDrunkService,
+    private drinkService: DrinkService,
+    private myApiService : MyApiService
   ) { }
 
   ngOnInit(): void {
     this.checkUserSelezionato();
+    
+    
   }
 
   checkUserSelezionato() {
@@ -42,5 +55,10 @@ export class HeaderComponent implements OnInit {
     dettaglio = dettaglio + ' - ' + profilo.peso + ' Kg.';
     return dettaglio;
   }
+
+  getDrink(){
+    return this.drinkService.getDrink();  
+  }
+
 
 }

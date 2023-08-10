@@ -6,34 +6,47 @@
                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 text-white me-3">
                     <p class="my-4 top-footer-title">CONTATTI</p>
                     <ul class="link-list mb-4">
-                        <a href=""><li class="mb-1">Telefono Verde Alcol 800 632000 - Ministero della Salute</li></a>
-                        <a href=""><li class="mb-1">https://www.salute.gov.it/portale/alcol/homeAlcol.jsp</li></a>
-                        <a href=""><li class="mb-1">Lorem ipsum dolor, sit.</li></a>
-                        <a href=""><li class="mb-1">Lorem ipsum. </li></a>
+                        <a href="">
+                            <li class="mb-1">Telefono Verde Alcol 800 632000 - Ministero della Salute</li>
+                        </a>
+                        <a href="https://www.salute.gov.it/portale/alcol/homeAlcol.jsp">
+                            <li class="mb-1">Link Portale Alcol</li>
+                        </a>
+                        <a href="">
+                            <li class="mb-1">Lorem ipsum dolor, sit.</li>
+                        </a>
+                        <a href="">
+                            <li class="mb-1">Lorem ipsum. </li>
+                        </a>
                     </ul>
                 </div>
                 <div class=" ps-0 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 text-white">
                     <p class="my-4 top-footer-title">QUICKLINKS</p>
                     <ul class="link-list mb-4">
-                        <a href="#"><li class="mb-3">Servizi utili</li></a>
+                        <a href="#">
+                            <li class="mb-3">Servizi utili</li>
+                        </a>
 
-                        <a href="#"><li class="mb-1">Certificato di autenticità.</li></a>
+                        <a href="#">
+                            <li class="mb-1">Certificato di autenticità.</li>
+                        </a>
                     </ul>
                 </div>
-
             </div>
         </div>
     </div>
 
     <!-- BOTTOM FOOTER -->
     <div class="container-fluid bottom-footer py-2 h-100">
-        <div class=" h-100 d-flex align-items-center justify-content-center">
-            <div class="d-flex link-container align-items-center justify-content-between">
-                    <div *ngFor="let link of footerLink">
-                        <a class="col-12" href="#"><small class="footer-link">{{link}}</small></a>
-                    </div>
-                
+        <div class=" h-100 d-flex align-items-center justify-content-center linkWrapper">
+            <div class="d-flex w-75 link-container align-items-center justify-content-center bottomLinkContainer">
+                <div *ngFor="let link of footerLink">
+                    <a class="col-12" href="#"><small class="footer-link">{{link}}</small></a>
+                </div>
             </div>
+        </div>
+        <div class="container-fluid justify-content-center mt-3 versionContainer">
+            <small class="versionString d-flex flex-row-reverse">V. {{version}}</small>
         </div>
     </div>
 </footer>

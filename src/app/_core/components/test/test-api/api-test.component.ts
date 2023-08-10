@@ -14,7 +14,7 @@ export class ApiTestComponent implements OnInit {
   ) { }
 
   async ngOnInit(): Promise<void> {
-    await this.chiamaMetodoEsempioAsync();
+    /* await this.chiamaMetodoEsempioAsync(); */
     this.chiamaMetodoEsempioObservables();
   }
 
@@ -34,7 +34,7 @@ export class ApiTestComponent implements OnInit {
       console.log('# ApiTestComponent Observables Response: ', response);
       this.tag = response?.tag;
     });
-
+    
 
   }
 
