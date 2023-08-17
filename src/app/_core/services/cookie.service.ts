@@ -10,28 +10,40 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class CookieDrunkService {
 
-  private userSelezionato: BehaviorSubject<User>;
+  private userSelezionato: BehaviorSubject<User | null>;
 
   constructor(
     private cookieService: CookieService,
   ) {
     this.userSelezionato = new BehaviorSubject<any>(null);
+    this.initUserExists();
     
   }
 
-  getValueUser(): Observable<User> {
+  getValueUser(): Observable<User | null> {
     return this.userSelezionato.asObservable();
   }
-  setValueUser(user: User): void {
+  setValueUser(user: User | null): void {
     this.userSelezionato.next(user);
+  }
+
+  initUserExists(){
+    const users = this.getUsers();
+    if (users && users?.utenti && users?.utenti?.length)
+    {
+      const user = this.getProfiloSelezionato(); 
+      if (user) {
+        this.setValueUser(user);
+      }
+    }
   }
 
   setUser(user: User) {
     let users = this.getUsers();
     if (users && users?.utenti && users?.utenti?.length) {
-      const mod = this.getUser(user?.nome) as User;
+      const mod = this.getUser(user?.id) as User;
       if (mod) {
-        const x = (users.utenti.map((e: any) => e.nome).indexOf(user?.nome));
+        const x = (users.utenti.map((e: any) => e.id).indexOf(user?.id));
         (users.utenti as Array<any>).splice(x, 1);
       }
       users.utenti.push(user);
@@ -82,12 +94,12 @@ export class CookieDrunkService {
     return null;
   }
 
-  setProfiloSelezionato(nome: string) {
+  setProfiloSelezionato(id: string) {
     const users = this.getUsers();
     if (users && users?.utenti && users?.utenti?.length) {
-      const mod = this.getUser(nome) as User;
-      const x = (users.utenti.map((e: any) => e.nome).indexOf(nome));
-      if (mod && x) {
+      const mod = this.getUser(id) as User;
+      const x = (users.utenti.map((e: any) => e.id).indexOf(id));
+      if (mod && x>=0) {
         users.utenti.forEach((e: User) => {
           e.profiloSelezionato = false;
         });
@@ -98,4 +110,22 @@ export class CookieDrunkService {
       }
     }
   }
+
+  deleteAllCookies(){
+    this.cookieService.deleteAll();
+  }
+
+  deleteUser(id: string){
+    const users = this.getUsers();
+    if (users && users?.utenti && users?.utenti?.length){
+      const mod = this.getUser(id) as User;
+      const x = (users.utenti.map((e: any) => e.id).indexOf(id));
+      if (mod && x>=0){
+        (users.utenti as Array<User>).splice(x, 1);
+        this.setUsers(users);
+        this.setValueUser(this.getProfiloSelezionato());
+      }
+    }
+  }
+
 }

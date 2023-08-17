@@ -1,0 +1,13 @@
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 300px;
+    min-height: 180px;
+    border: 1px solid black;
+    padding: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
