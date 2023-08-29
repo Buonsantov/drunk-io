@@ -15,6 +15,10 @@ import { CookieService } from 'ngx-cookie-service';
 import { HeaderComponent } from './_core/components/header/header.component';
 import { FooterComponent } from './_core/components/footer/footer.component';
 import { TestModule } from './_core/components/test/test.module';
+import { ProfiloComponent } from './_core/components/profilo/profilo.component';
+import { FormsModule } from '@angular/forms';
+import { DirectivesModule } from './_core/directives/directives.module';
+import { ProfiliComponent } from './_core/components/profili/profili.component';
 
 
 require('moment/moment.js');
@@ -29,16 +33,20 @@ export function appInit(appConfigService: ConfigService) {
         ContentComponent,
         HeaderComponent,
         FooterComponent,
+        ProfiloComponent,
+        ProfiliComponent,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
         LibUiKitModule,
+        FormsModule,
         NgbModule,
         NgSelectModule,
         RouterModule,
         TestModule,
+        DirectivesModule,
     ],
     providers: [
         [CookieService],

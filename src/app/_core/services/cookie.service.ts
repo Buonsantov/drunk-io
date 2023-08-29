@@ -17,7 +17,7 @@ export class CookieDrunkService {
   ) {
     this.userSelezionato = new BehaviorSubject<any>(null);
     this.initUserExists();
-    
+
   }
 
   getValueUser(): Observable<User | null> {
@@ -27,11 +27,10 @@ export class CookieDrunkService {
     this.userSelezionato.next(user);
   }
 
-  initUserExists(){
+  initUserExists() {
     const users = this.getUsers();
-    if (users && users?.utenti && users?.utenti?.length)
-    {
-      const user = this.getProfiloSelezionato(); 
+    if (users && users?.utenti && users?.utenti?.length) {
+      const user = this.getProfiloSelezionato();
       if (user) {
         this.setValueUser(user);
       }
@@ -99,7 +98,7 @@ export class CookieDrunkService {
     if (users && users?.utenti && users?.utenti?.length) {
       const mod = this.getUser(id) as User;
       const x = (users.utenti.map((e: any) => e.id).indexOf(id));
-      if (mod && x>=0) {
+      if (mod && x >= 0) {
         users.utenti.forEach((e: User) => {
           e.profiloSelezionato = false;
         });
@@ -111,16 +110,16 @@ export class CookieDrunkService {
     }
   }
 
-  deleteAllCookies(){
+  deleteAllCookies() {
     this.cookieService.deleteAll();
   }
 
-  deleteUser(id: string){
+  deleteUser(id: string) {
     const users = this.getUsers();
-    if (users && users?.utenti && users?.utenti?.length){
+    if (users && users?.utenti && users?.utenti?.length) {
       const mod = this.getUser(id) as User;
       const x = (users.utenti.map((e: any) => e.id).indexOf(id));
-      if (mod && x>=0){
+      if (mod && x >= 0) {
         (users.utenti as Array<User>).splice(x, 1);
         this.setUsers(users);
         this.setValueUser(this.getProfiloSelezionato());

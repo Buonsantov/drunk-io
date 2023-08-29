@@ -34,7 +34,7 @@ export class ApiTestComponent implements OnInit {
       console.log('# ApiTestComponent Observables Response: ', response);
       this.tag = response?.tag;
     });
-    
+
 
   }
 
