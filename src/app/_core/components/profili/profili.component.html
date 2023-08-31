@@ -2,8 +2,8 @@
     <h3 class="p-5 title-drunk">Lista Profili</h3>
     <div class="clickable add-profile" placement="top" ngbTooltip="Aggiungi" [routerLink]="['/profilo', '0']">
         <svg class="icon-lg icon" style="fill: #0059b3;">
-            <use href="/bootstrap-italia/dist/svg/sprites.svg#it-plus-circle"
-                xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
+            <use href="./bootstrap-italia/dist/svg/sprites.svg#it-plus-circle"
+                xlink:href="./bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
         </svg>
     </div>
 </div>
@@ -18,8 +18,8 @@
                         <div class="justify-content-between d-flex">
                             <div class="d-flex">
                                 <svg class="icon">
-                                    <use href="/bootstrap-italia/dist/svg/sprites.svg#it-user"
-                                        xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
+                                    <use href="./bootstrap-italia/dist/svg/sprites.svg#it-user"
+                                        xlink:href="./bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
                                 </svg>
                                 <h3 class="card-title h5 pt-1"> {{user?.nome}}</h3>
                             </div>
@@ -27,22 +27,22 @@
                                 <div class="clickable" placement="top" ngbTooltip="Cancella"
                                     (click)="cancella(user?.id)">
                                     <svg class="icon">
-                                        <use href="/bootstrap-italia/dist/svg/sprites.svg#it-delete"
-                                            xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
+                                        <use href="./bootstrap-italia/dist/svg/sprites.svg#it-delete"
+                                            xlink:href="./bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
                                     </svg>
                                 </div>
                                 <div class="clickable" placement="top" ngbTooltip="Modifica"
                                     [routerLink]="['/profilo', user.id]">
                                     <svg class="icon ">
-                                        <use href="/bootstrap-italia/dist/svg/sprites.svg#it-pencil"
-                                            xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
+                                        <use href="./bootstrap-italia/dist/svg/sprites.svg#it-pencil"
+                                            xlink:href="./bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
                                     </svg>
                                 </div>
                                 <div (click)="selezionaProfilo(user?.id)" placement="top" ngbTooltip="Seleziona profilo"
                                     [ngClass]="user.profiloSelezionato ? 'disabled' : 'clickable green-fill' ">
                                     <svg class="icon  ">
-                                        <use href="/bootstrap-italia/dist/svg/sprites.svg#it-check"
-                                            xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
+                                        <use href="./bootstrap-italia/dist/svg/sprites.svg#it-check"
+                                            xlink:href="./bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
                                     </svg>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@
                     <div class="callout-title">
                         <div class="callout-title-sub">
                             <svg class="icon">
-                                <use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use>
+                                <use href="./bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use>
                             </svg>
                             <span class="visually-hidden">Confermato</span>
                             <span class="text">Info</span>

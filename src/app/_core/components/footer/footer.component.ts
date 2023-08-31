@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { MyApiService } from 'src/app/_core/services/my-api.service';
+import { VersionamentoMFApiImplService } from '../../services/API/versionamentoMFApiImpl.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,9 +11,9 @@ export class FooterComponent {
 
   version?: any;
   constructor(
-    private myApiService: MyApiService,
+    private versionamentoMFApiImplService: VersionamentoMFApiImplService,
     private http: HttpClient,
-    ) {
+  ) {
     this.getData();
   }
 
@@ -42,9 +42,8 @@ export class FooterComponent {
     });
   }
 
-  getData() {
-    this.myApiService.getData().subscribe((data: any) => {
-      this.version = data.tag;
-    });
+  async getData() {
+    const resp = await this.versionamentoMFApiImplService.recuperaTagUsingGET().toPromise();
+    this.version = resp.tag;
   }
 }
