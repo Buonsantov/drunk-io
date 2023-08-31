@@ -14,11 +14,11 @@
                             <div class="col-lg-12 col-sm-12 col-12">
                                 <div class="form-group input-item">
                                     <label for="fromMail" class="active">Mail*</label>
-                                    <input type="text" name="fromMail" appLowercase class=" form-control"
+                                    <input type="text" name="fromMail" appLowercase appEmailControl class=" form-control"
                                         name="fromMail" id="fromMail" [(ngModel)]="fromMail" #fromMailModel="ngModel"
                                         required>
                                     <div *ngIf="fromMailModel.touched && fromMailModel.invalid" class="invalid-input">
-                                        Campo obbligatorio
+                                        Campo obbligatorio, il formato della mail deve essere corretto
                                     </div>
                                 </div>
                             </div>
