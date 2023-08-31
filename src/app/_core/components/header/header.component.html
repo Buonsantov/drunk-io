@@ -6,11 +6,11 @@
             <div class="top-header-slogan pt-2 ps-4 pt-1 ps-5" *ngIf="user">
 
                 <div class="d-flex align-items-center justify-content-around flex-wrap flex-sm-nowrap ">
-                    <a class="avatar size-md" href="#">
+                    <div class="avatar size-md">
                         <svg class="icon icon-secondary">
                             <use href="/bootstrap-italia/dist/svg/sprites.svg#it-user"></use>
                         </svg>
-                    </a> <span class="ps-2 text-white pt-1 fs-6 user-center" style="line-height: 14px;">
+                    </div> <span class="ps-2 text-white pt-1 fs-6 user-center" style="line-height: 14px;">
                         <b>{{user?.nome |titlecase}}</b>
                         <br><i class="dettaglio-user" style="color: white!important;"> {{getDettaglio(user)
                             |titlecase}}</i>
@@ -23,11 +23,11 @@
     </div>
     <!-- logo container -->
     <div class="mx-0 px-0 ps-3 logoWrapper w-100 d-flex align-items-center">
-        <div class="logo-Container pe-0 d-flex">
+        <div class="logo-Container pe-0 d-flex clickable" (click)="goToHome()">
             <i class="fa-solid fa-wine-glass d-inline"></i>
         </div>
-        <div class="logo-Container ps-0 d-flex align-items-center h-100">
-            <h3 class="drunk-text m-0">
+        <div class="logo-Container ps-0 d-flex align-items-center h-100 clickable" (click)="goToHome()">
+            <h3 class="drunk-text m-0 clickable" >
                 <div class="d-block d-lg-none"><strong>Drunk.IO</strong></div>
                 <div class="d-none d-lg-block"><strong>Bevi <br> Responsabilmente</strong></div>
             </h3>
@@ -69,11 +69,11 @@
                             </div>
                         </div>
                         <div id="user-section" *ngIf="user">
-                            <a class="avatar size-xl" href="#">
+                            <div class="avatar size-xl" >
                                 <svg class="icon icon-secondary">
                                     <use href="/bootstrap-italia/dist/svg/sprites.svg#it-user"></use>
                                 </svg>
-                            </a>
+                            </div>
                             <p class="user-center">
                                 <b>{{user?.nome |titlecase}}</b>
                                 <br><i class="dettaglio-user"> {{getDettaglio(user) |titlecase}}</i>
