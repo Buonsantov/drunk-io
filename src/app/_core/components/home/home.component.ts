@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   tabella: any;
   sanzioni: any;
   tasso: any;
-  mostraCalcolo = true;
+  mostraCalcolo = false;
 
   constructor(
     private router: Router,
@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
     try {
       this.tabella = await this.apiMFApiImplService.recuperaTabAlcolemicaUsingGET().toPromise();
       this.sanzioni = await this.apiMFApiImplService.recuperaSanzioniUsingGET().toPromise();
+      this.mostraCalcolo = true;
     } catch (error) {
       this.libToastService.alertToast('Errore durante il recupero delle informazioni.');
     }

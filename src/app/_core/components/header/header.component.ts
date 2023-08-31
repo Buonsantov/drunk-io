@@ -37,8 +37,6 @@ export class HeaderComponent implements OnInit {
   checkUserSelezionato() {
     this.cookieDrunkService.getValueUser().subscribe((value) => {
       this.user = value;
-      console.log('#Header user: ', this.user);
-
     });
   }
 

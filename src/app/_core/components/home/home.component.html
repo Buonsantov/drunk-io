@@ -1,2 +1,2 @@
-<app-calcolo-alcolemico [tabella]="tabella?.response" [show]="mostraCalcolo" (tassoOut)="handleTasso($event)"></app-calcolo-alcolemico>
-<app-risultato-alcolemico [tabella]="sanzioni?.response" [tasso]="tasso" (back)="handleRisultato($event)"></app-risultato-alcolemico>
+<app-calcolo-alcolemico [tabella]="tabella?.response" [show]="mostraCalcolo" (tassoOut)="handleTasso($event)" *ngIf="mostraCalcolo"></app-calcolo-alcolemico>
+<app-risultato-alcolemico [tabella]="sanzioni?.response" [tasso]="tasso" (back)="handleRisultato($event)"*ngIf="!mostraCalcolo" ></app-risultato-alcolemico>

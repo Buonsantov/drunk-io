@@ -29,7 +29,6 @@ export class ProfiliComponent implements OnInit {
 
   getProfili() {
     this.profili = this.cookieDrunkService.getUsers()?.utenti;
-    console.log('profili: ', this.profili);
   }
 
   getSesso(sesso: string) {

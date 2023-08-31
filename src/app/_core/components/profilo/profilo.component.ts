@@ -96,7 +96,6 @@ export class ProfiloComponent implements OnInit {
   }
 
   handlerChangeSesso(event: any) {
-    console.log(event);
     switch (event) {
       case 'M':
         this.pesi = this.pesoM;
@@ -113,7 +112,6 @@ export class ProfiloComponent implements OnInit {
 
   chackUser() {
     const id = this.route.snapshot.paramMap.get('id');
-    console.log('id: ', id);
     if (id !== null && id === '0') {
       this.modify = false;
       this.user = new User();
@@ -123,7 +121,6 @@ export class ProfiloComponent implements OnInit {
         this.user = this.cookieDrunkService.getUser(id);
       }
     }
-    console.log('user: ', this.user);
   }
 
 
@@ -135,7 +132,6 @@ export class ProfiloComponent implements OnInit {
     const valid = this.formUtente.valid;
     if (valid) {
       this.libToastService.okToast('Azione completata con successo.');
-      console.log('user saved: ', this.user);
       this.cookieDrunkService.setUser(this.user);
       this.router.navigate(['/profili']);
     } else {
