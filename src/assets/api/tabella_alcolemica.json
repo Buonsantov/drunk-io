@@ -150,6 +150,157 @@
                 }               
                 
             ]
+        },
+        {
+            "nome": "Birra leggera",
+            "gradazione": 3.50,
+            "dettaglioAlcolici":[
+                {
+                    "stomacoPieno": false,
+                    "kg":45,
+                    "tasso": 0.39,
+                    "sesso":"F"
+                },
+                {
+                    "stomacoPieno": false,
+                    "kg":55,
+                    "tasso":0.32,
+                    "sesso":"F"
+                },
+                {
+                    "stomacoPieno": false,
+                    "kg":60,
+                    "tasso":0.29,
+                    "sesso":"F"
+                },
+                {
+                    "stomacoPieno": false,
+                    "kg":65,
+                    "tasso":0.27,
+                    "sesso":"F"
+                },
+                {
+                    "stomacoPieno": false,
+                    "kg":75,
+                    "tasso":0.24,
+                    "sesso":"F"
+                },
+                {
+                    "stomacoPieno": false,
+                    "kg":80,
+                    "tasso":0.22,
+                    "sesso":"F"
+                },
+                {
+                    "stomacoPieno": true,
+                    "kg":45,
+                    "tasso":0.23,
+                    "sesso":"F"
+                },
+                {
+                    "stomacoPieno": true,
+                    "kg":55,
+                    "tasso":0.19,
+                    "sesso":"F"
+                },
+                {
+                    "stomacoPieno": true,
+                    "kg":60,
+                    "tasso":0.17,
+                    "sesso":"F"
+                },
+                {
+                    "stomacoPieno": true,
+                    "kg":65,
+                    "tasso":0.16,
+                    "sesso":"F"
+                },
+                {
+                    "stomacoPieno": true,
+                    "kg":75,
+                    "tasso":0.14,
+                    "sesso":"F"
+                },
+                {
+                    "stomacoPieno": true,
+                    "kg":80,
+                    "tasso":0.13,
+                    "sesso":"F"
+                },
+                {
+                    "stomacoPieno": false,
+                    "kg":55,
+                    "tasso":0.25,
+                    "sesso":"M"
+                },
+                {
+                    "stomacoPieno": false,
+                    "kg":65,
+                    "tasso":0.21,
+                    "sesso":"M"
+                },
+                {
+                    "stomacoPieno": false,
+                    "kg":70,
+                    "tasso":0.19,
+                    "sesso":"M"
+                },
+                {
+                    "stomacoPieno": false,
+                    "kg":75,
+                    "tasso":0.18,
+                    "sesso":"M"
+                },
+                {
+                    "stomacoPieno": false,
+                    "kg":80,
+                    "tasso":0.17,
+                    "sesso":"M"
+                },
+                {
+                    "stomacoPieno": false,
+                    "kg":90,
+                    "tasso":0.15,
+                    "sesso":"M"
+                },
+                {
+                    "stomacoPieno": true,
+                    "kg":55,
+                    "tasso":0.14,
+                    "sesso":"M"
+                },
+                {
+                    "stomacoPieno": true,
+                    "kg":65,
+                    "tasso":0.12,
+                    "sesso":"M"
+                },
+                {
+                    "stomacoPieno": true,
+                    "kg":70,
+                    "tasso":0.11,
+                    "sesso":"M"
+                },
+                {
+                    "stomacoPieno": true,
+                    "kg":75,
+                    "tasso":0.10,
+                    "sesso":"M"
+                },
+                {
+                    "stomacoPieno": true,
+                    "kg":80,
+                    "tasso":0.10,
+                    "sesso":"M"
+                },
+                {
+                    "stomacoPieno": true,
+                    "kg":90,
+                    "tasso":0.09,
+                    "sesso":"M"
+                }               
+                
+            ]
         }
     ],
     "status": 200
