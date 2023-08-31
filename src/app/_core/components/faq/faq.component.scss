@@ -2,3 +2,20 @@
     border-left: 1px solid #8080805c;
     border-right: 1px solid #8080805c;
 }
+
+.div-table{
+    text-align: -webkit-center;
+    margin: 25px;
+}
+.table-w{
+    min-width: 60%;
+}
+
+tr{
+    height: 30px;
+}
+
+thead, tbody, tfoot, tr, td, th {
+    padding: 4px 10px!important;
+
+}

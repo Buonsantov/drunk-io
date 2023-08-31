@@ -16,6 +16,62 @@ export class ProfiloComponent implements OnInit {
   modify = false;
   @ViewChild('formUtenteValid') formUtente!: NgForm;
 
+  pesoM = [
+    {
+      label: '55 Kg o meno',
+      peso: 55
+    },
+    {
+      label: '65 Kg',
+      peso: 65
+    },
+    {
+      label: '70 Kg',
+      peso: 70
+    },
+    {
+      label: '75 Kg',
+      peso: 75
+    },
+    {
+      label: '80 Kg',
+      peso: 80
+    },
+    {
+      label: '90 Kg o più',
+      peso: 90
+    }
+  ];
+
+  pesoF = [
+    {
+      label: '45 Kg o meno',
+      peso: 45
+    },
+    {
+      label: '55 Kg',
+      peso: 55
+    },
+    {
+      label: '60 Kg',
+      peso: 60
+    },
+    {
+      label: '65 Kg',
+      peso: 65
+    },
+    {
+      label: '75 Kg',
+      peso: 75
+    },
+    {
+      label: '80 Kg o più',
+      peso: 80
+    }
+  ];
+
+  pesi = [] as any;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -27,6 +83,32 @@ export class ProfiloComponent implements OnInit {
 
   ngOnInit(): void {
     this.chackUser();
+  }
+
+  getSesso(): boolean {
+    if (!this.user) {
+      return true;
+    }
+    if (!this.user?.sesso) {
+      return true;
+    }
+    return false;
+  }
+
+  handlerChangeSesso(event: any) {
+    console.log(event);
+    switch (event) {
+      case 'M':
+        this.pesi = this.pesoM;
+        break;
+      case 'F':
+        this.pesi = this.pesoF;
+        break;
+      default:
+        this.pesi = [];
+        break;
+    }
+    this.user.peso = null;
   }
 
   chackUser() {

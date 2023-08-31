@@ -28,7 +28,8 @@
                                 <div class="form-group input-item">
                                     <label for="sesso" class="active label-select">Sesso*</label>
                                     <ng-select #MyNgSelect [searchable]="false" [clearable]="true" required
-                                        [(ngModel)]="user.sesso" name="sesso" title="Sesso" id="sesso" #sesso="ngModel">
+                                        (change)="handlerChangeSesso($event)" [(ngModel)]="user.sesso" name="sesso"
+                                        title="Sesso" id="sesso" #sesso="ngModel">
                                         <ng-option [value]="'M'">Uomo</ng-option>
                                         <ng-option [value]="'F'">Donna</ng-option>
                                     </ng-select>
@@ -40,14 +41,11 @@
                             <div class="col-lg-3 col-6">
                                 <div class="form-group input-item">
                                     <label for="peso" class="active label-select">Peso (kg)*</label>
-                                    <ng-select #pesoSelect [searchable]="true" [clearable]="true" required
-                                        [(ngModel)]="user.peso" name="peso" title="peso" id="peso" #peso="ngModel">
-                                        <ng-option [value]="'45'">45 o minore</ng-option>
-                                        <ng-option [value]="'55'">55</ng-option>
-                                        <ng-option [value]="'60'">60</ng-option>
-                                        <ng-option [value]="'65'">65</ng-option>
-                                        <ng-option [value]="'75'">75</ng-option>
-                                        <ng-option [value]="'80'">80 +</ng-option>
+                                    <ng-select #pesoSelect [searchable]="false" [clearable]="true" required
+                                        [disabled]="getSesso()" [(ngModel)]="user.peso" name="peso" title="peso"
+                                        id="peso" #peso="ngModel">
+                                        <ng-option *ngFor="let p of pesi" [value]="p?.peso">{{p?.label}}</ng-option>
+
 
                                     </ng-select>
                                     <div *ngIf="peso.touched && peso.invalid" class="invalid-input">
