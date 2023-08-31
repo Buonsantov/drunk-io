@@ -11,6 +11,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class CookieDrunkService {
 
   private userSelezionato: BehaviorSubject<User | null>;
+  cookieInfo!: { info: boolean, cookie: boolean };
 
   constructor(
     private cookieService: CookieService,
@@ -18,6 +19,22 @@ export class CookieDrunkService {
     this.userSelezionato = new BehaviorSubject<any>(null);
     this.initUserExists();
 
+  }
+
+  salvaInfo(info: boolean, cookie: boolean) {
+    this.cookieInfo = { info, cookie };
+    const objectString = JSON.stringify(this.cookieInfo);
+    this.cookieService.set('Informativa', objectString);
+  }
+
+  recuperaInfo() {
+    const info = this.cookieService.get('Informativa');
+    if (info) {
+      this.cookieInfo = JSON.parse(info);
+    } else {
+      this.cookieInfo = { info: false, cookie: false };
+    }
+    return this.cookieInfo;
   }
 
   getValueUser(): Observable<User | null> {

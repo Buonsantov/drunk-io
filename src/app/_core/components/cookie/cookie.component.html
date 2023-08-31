@@ -1,0 +1,98 @@
+<h3 class="p-5 title-drunk">Accettazione Cookie / Informativa</h3>
+
+<div class="my-5">
+    <div class="callout">
+        <div class="callout-inner">
+            <div class="callout-title">
+                <div class="callout-title-sub">
+                    <svg class="icon">
+                        <use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use>
+                    </svg>
+                    <span class="visually-hidden">Confermato</span>
+                    <span class="text">Informativa</span>
+                </div>
+
+            </div>
+            <p><b>Drunk.IO</b> utilizza le Tabelle fornite dal ministero e pubblicate sulla Gazzetta Ufficiale della
+                Repubblica Italiana (8-9-2008, serie generale - n. 210). Le tabelle sono scaricabili al seguente <a>
+                    link </a>.</p>
+<ul>
+    <li>
+        <p>L'applicazione <b>Drunk.IO</b> è destinata esclusivamente a scopi informativi e non deve essere
+            utilizzata per decisioni legali o relative alla guida.</p>
+    </li>
+    <li> <p>Le stime fornite da <b>Drunk.IO</b> non sono affidabili e potrebbero variare. Si consiglia vivamente di
+        consultare un professionista prima di prendere decisioni basate su queste informazioni.</p></li>
+    <li> <p>Gli sviluppatori di <b>Drunk.IO</b> non sono responsabili per qualsiasi danno derivante dall'uso di
+        questa
+        applicazione.</p></li>
+</ul>
+            
+           
+           
+            <p>
+                I limiti legali sono descritti nella TABELLA DESCRITTIVA DEI PRINCIPALI SINTOMI CORRELATI AI DIVERSI
+                LIVELLI DI CONCENTRAZIONE ALCOLEMICA <br><i>(Art.6 del decreto-legge 3 agosto 2007 n. 117 convertito in
+                    legge,
+                    con modificazioni dell'art.1, della legge 2 ottobre 2007, n 160)
+                    <br><br>
+                    (*) Si precisa che a parità di alcol assunto, sesazioni ed effetti sono estremamente variabilili da
+                    soggetto a soggetto, con possibilità di manifestazioni anche opposte tra di loro; saranno riportati
+                    sansioni ed effetti più frequenti.
+                </i>
+
+            </p>
+        </div>
+    </div>
+    <div class="row w-100 d-flex justify-content-center">
+        <div class="toggles col-6 col-md-4 col-lg-2">
+            <label for="info">
+                Presa visione
+                <input type="checkbox" id="info" [(ngModel)]="info">
+                <span class="lever"></span>
+            </label>
+        </div>
+    </div>
+</div>
+
+
+<div class="my-5">
+    <div class="callout">
+        <div class="callout-inner">
+            <div class="callout-title">
+                <div class="callout-title-sub">
+                    <svg class="icon">
+                        <use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use>
+                    </svg>
+                    <span class="visually-hidden">Confermato</span>
+                    <span class="text">Accettazione Cookie</span>
+                </div>
+            </div>
+            <p>Quando visiti il nostro sito web e inserisci un profilo, raccogliamo alcune informazioni al fine di
+                migliorare la tua esperienza. Le informazioni raccolte possono includere il tuo nome, peso e sesso.
+                Questi dati ci aiutano a fornirti un servizio
+                personalizzato e adattato alle tue esigenze.
+                <br>    <br>
+                Continuando a utilizzare il nostro sito web e inserendo un
+                profilo, acconsenti all'utilizzo dei cookie e alla raccolta delle informazioni come descritto in questa
+                informativa. Se desideri revocare il tuo consenso o avere ulteriori informazioni sulle nostre pratiche
+                di gestione dei dati, ti preghiamo di contattarci.
+            </p>
+        </div>
+    </div>
+    <div class="row w-100 d-flex justify-content-center">
+        <div class="toggles col-6 col-md-4 col-lg-2">
+            <label for="cookie">
+                Accetta
+                <input type="checkbox" id="cookie" [(ngModel)]="cookie">
+                <span class="lever"></span>
+            </label>
+        </div>
+    </div>
+</div>
+
+<div class="my-5">
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-primary btn-sm" (click)="accetta()">Continua</button>
+    </div>
+</div>

@@ -40,6 +40,7 @@ export class ProfiliComponent implements OnInit {
     this.cookieDrunkService.setProfiloSelezionato(id);
     this.libToastService.okToast('Profilo selezionato correttamente');
     this.getProfili();
+    this.router.navigate(['/']);
   }
 
   confermaCancella(id: string) {

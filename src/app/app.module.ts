@@ -19,6 +19,8 @@ import { ProfiloComponent } from './_core/components/profilo/profilo.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesModule } from './_core/directives/directives.module';
 import { ProfiliComponent } from './_core/components/profili/profili.component';
+import { CookieComponent } from './_core/components/cookie/cookie.component';
+import { HomeComponent } from './_core/components/home/home.component';
 
 
 require('moment/moment.js');
@@ -35,6 +37,8 @@ export function appInit(appConfigService: ConfigService) {
         FooterComponent,
         ProfiloComponent,
         ProfiliComponent,
+        CookieComponent,
+        HomeComponent,
     ],
     imports: [
         BrowserModule,

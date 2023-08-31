@@ -1,15 +1,14 @@
 <div class="d-flex justify-content-between" style="place-items: center;">
-    <h3 class="p-5">Lista profili</h3>
-    <div class="clickable add-profile" placement="top" ngbTooltip="Aggiungi"
-    [routerLink]="['/profilo', '0']">
-        <svg class="icon-lg icon" style="fill: #06c;">
+    <h3 class="p-5 title-drunk">Lista Profili</h3>
+    <div class="clickable add-profile" placement="top" ngbTooltip="Aggiungi" [routerLink]="['/profilo', '0']">
+        <svg class="icon-lg icon" style="fill: #0059b3;">
             <use href="/bootstrap-italia/dist/svg/sprites.svg#it-plus-circle"
                 xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
         </svg>
     </div>
 </div>
 
-<div id="cont" class="py-3 px-5">
+<div id="cont" class="py-3 px-5" style="margin-bottom: 150px;">
     <div class="row w-100 card-center" id="profili">
         <div class="col-12 col-lg-6 col-xl-4" *ngFor="let user of profili">
             <!--start card-->
@@ -25,7 +24,8 @@
                                 <h3 class="card-title h5 pt-1"> {{user?.nome}}</h3>
                             </div>
                             <div class="d-flex">
-                                <div class="clickable" placement="top" ngbTooltip="Cancella" (click)="cancella(user?.id)">
+                                <div class="clickable" placement="top" ngbTooltip="Cancella"
+                                    (click)="cancella(user?.id)">
                                     <svg class="icon">
                                         <use href="/bootstrap-italia/dist/svg/sprites.svg#it-delete"
                                             xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
@@ -49,12 +49,43 @@
 
                         </div>
                         <div class="mt-2 mb-5">
-                            {{getSesso(user.sesso)}} - {{user.peso}}Kg
+                            <ul>
+                                <li>
+                                    {{getSesso(user.sesso)}}
+                                </li>
+                                <li>
+                                    {{user.peso}}Kg
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
             <!--end card-->
+        </div>
+        <div *ngIf="!profili?.length" class="informativa">
+            <div class="callout">
+                <div class="callout-inner">
+                    <div class="callout-title">
+                        <div class="callout-title-sub">
+                            <svg class="icon">
+                                <use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle"></use>
+                            </svg>
+                            <span class="visually-hidden">Confermato</span>
+                            <span class="text">Info</span>
+                        </div>
+
+                    </div>
+                    <p>
+                        Si prega di Aggiungere almeno un Profilo per usare <b>Drunk.IO</b>
+                        <br>
+                        Si può aggiungere un nuovo profilo cliccando l'immagine "+" in alto nella pagina.
+                        <br>
+                        Successivamente sarà possibile selezionare un profilo da utilizzare, cancellare o modificare.
+                        Possono essere creati n profili.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

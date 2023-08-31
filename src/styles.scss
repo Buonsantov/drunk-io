@@ -4,3 +4,31 @@
 .container {
     max-width: 100vw;
 }
+
+.callout {
+    max-width: 90%;
+    margin-left: 5%;
+    .callout-inner {
+        padding: 1.1rem 2.222rem;
+        border: 2px solid;;
+        border-color: #5d7083;
+        margin: 1.75rem 0 1rem;
+        border-radius: 15px;
+    }
+    .callout-title-sub{
+        background: white;
+        width: max-content;
+    }
+}
+
+.callout:not(.callout-highlight):not(.callout-more) .callout-title .text:after {
+    content: "";
+    width: 0%;
+}
+.callout:not(.callout-highlight):not(.callout-more) .callout-title:before {
+    width: 0;
+}
+
+.title-drunk{
+    color: #0059b3
+}

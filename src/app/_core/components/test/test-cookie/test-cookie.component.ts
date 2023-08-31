@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/_core/model/user-model';
 import { CookieDrunkService } from 'src/app/_core/services/cookie.service';
-import { Drink } from 'src/app/_core/model/drink-model';
-import { DrinkService } from 'src/app/_core/services/drink.service';
 import { ModalDrunkService } from 'src/app/_lib/ui-kit/_components/modal/services/modal.service';
 import { THEME_COLORS_ENUM } from 'src/app/_lib/ui-kit/_models/constants';
 
@@ -18,16 +16,10 @@ export class TestCookieComponent implements OnInit {
   users: User[] = [];
   constructor(
     private cookieDrunkService: CookieDrunkService,
-    private DrinkService: DrinkService,
     private modal: ModalDrunkService
   ) { }
   ngOnInit(): void {
-
     this.insertUsers();
-
-    /* PROVA DRINK */
-    const drink1 = new Drink('peroni', 'Alcolico', 33, 8);
-    this.DrinkService.setDrink(drink1);
   }
 
   insertUsers() {
@@ -38,7 +30,6 @@ export class TestCookieComponent implements OnInit {
     console.log('#[Cookie] Init');
     const user = new User();
     user.nome = 'Vito Buonsanto';
-    user.cookie = true;
     user.peso = 90;
     user.sesso = 'M';
 
@@ -49,7 +40,6 @@ export class TestCookieComponent implements OnInit {
 
     const user2 = new User();
     user2.nome = 'Fabrizio Favia';
-    user2.cookie = true;
     user2.peso = 60;
     user2.sesso = 'M';
     this.cookieDrunkService.setUser(user2);
@@ -61,7 +51,7 @@ export class TestCookieComponent implements OnInit {
   }
 
   cancella(id: string) {
-    
+
     this.cookieDrunkService.deleteUser(id);
     this.users = this.cookieDrunkService.getUsers().utenti;
   }
