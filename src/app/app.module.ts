@@ -23,6 +23,8 @@ import { CookieComponent } from './_core/components/cookie/cookie.component';
 import { HomeComponent } from './_core/components/home/home.component';
 import { FaqComponent } from './_core/components/faq/faq.component';
 import { ContattiComponent } from './_core/components/contatti/contatti.component';
+import { CalcoloAlcolemicoComponent } from './_core/components/calcolo-alcolemico/calcolo-alcolemico.component';
+import { RisultatoAlcolemicoComponent } from './_core/components/risultato-alcolemico/risultato-alcolemico.component';
 
 
 require('moment/moment.js');
@@ -43,6 +45,8 @@ export function appInit(appConfigService: ConfigService) {
         HomeComponent,
         FaqComponent,
         ContattiComponent,
+        CalcoloAlcolemicoComponent,
+        RisultatoAlcolemicoComponent,
     ],
     imports: [
         BrowserModule,

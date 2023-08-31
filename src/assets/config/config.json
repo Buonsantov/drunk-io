@@ -2,6 +2,7 @@
     "project": "drunk-app",
     "isProd": false,
     "backendAPI": {
-       "tagURL":"/assets/config/tag.json"
+        "apiBase": "/assets/api",
+        "tagURL": "/assets/config/tag.json"
     }
 }
