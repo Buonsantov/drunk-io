@@ -45,10 +45,10 @@ export class ContattiComponent implements OnInit {
     this.body = 'Mail from ' + this.fromMail + ' <br>' + this.body;
     const objSend = {
       Host: 'smtp.elasticemail.com',
-      Username: 'buonsantovito@gmail.com',
-      Password: '6D781D17CD74F848337A7C4F18384EF3A8FF',
+      Username: 'buonsantovito@outlook.it',
+      Password: 'F87CCE5BD7856CBF98BC2546FE36407CBC5D',
       To: 'buonsantovito@outlook.it',
-      From: 'buonsantovito@gmail.com',
+      From: 'buonsantovito@outlook.it',
       Subject: this.subject,
       Body: this.body
     };
