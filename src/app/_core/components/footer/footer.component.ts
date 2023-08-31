@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { MyApiService } from 'src/app/my-api.service';
+import { MyApiService } from 'src/app/_core/services/my-api.service';
 
 @Component({
   selector: 'app-footer',

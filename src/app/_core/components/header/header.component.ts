@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MyApiService } from 'src/app/my-api.service';
+import { Router } from '@angular/router';
 import { Drink } from '../../model/drink-model';
 import { User } from '../../model/user-model';
 import { CookieDrunkService } from '../../services/cookie.service';
-import { Router } from '@angular/router';
 
 
 
@@ -22,7 +21,6 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private cookieDrunkService: CookieDrunkService,
-    private myApiService: MyApiService,
     private router: Router,
   ) { }
 

@@ -14,7 +14,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CookieService } from 'ngx-cookie-service';
 import { HeaderComponent } from './_core/components/header/header.component';
 import { FooterComponent } from './_core/components/footer/footer.component';
-import { TestModule } from './_core/components/test/test.module';
 import { ProfiloComponent } from './_core/components/profilo/profilo.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesModule } from './_core/directives/directives.module';
@@ -57,7 +56,6 @@ export function appInit(appConfigService: ConfigService) {
         NgbModule,
         NgSelectModule,
         RouterModule,
-        TestModule,
         DirectivesModule,
     ],
     providers: [
