@@ -3,32 +3,30 @@
     <div class="top-footer-wrapper">
         <div class="container-fluid top-footer">
             <div class="row ms-0 w-100 h-100 d-flex justify-content-center">
-                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 text-white me-3">
+
+                <div class=" ps-0 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 text-white">
                     <p class="my-4 top-footer-title">CONTATTI</p>
                     <ul class="link-list mb-4">
-                        <a href="">
-                            <li class="mb-1">Telefono Verde Alcol 800 632000 - Ministero della Salute</li>
+                        <a href = "mailto: buonsantovito@gmail.com">
+                            <li class="mb-3"><b>Email:</b> buonsantovito@gmail.com</li>
                         </a>
-                        <a href="https://www.salute.gov.it/portale/alcol/homeAlcol.jsp">
-                            <li class="mb-1">Link Portale Alcol</li>
-                        </a>
-                        <a href="">
-                            <li class="mb-1">Lorem ipsum dolor, sit.</li>
-                        </a>
-                        <a href="">
-                            <li class="mb-1">Lorem ipsum. </li>
+
+                        <a href="https://github.com/Buonsantov/drunk-io">
+                            <li class="mb-3"><b>Repository:</b> GitHub</li>
                         </a>
                     </ul>
                 </div>
-                <div class=" ps-0 col-sm-12 col-md-6 col-lg-3 col-xl-3 col-xxl-3 text-white">
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3 text-white me-3">
                     <p class="my-4 top-footer-title">QUICKLINKS</p>
                     <ul class="link-list mb-4">
-                        <a href="#">
-                            <li class="mb-3">Servizi utili</li>
+                        <a href="">
+                            <li class="mb-1"><b>Telefono Verde:</b> 800 632000 </li>
                         </a>
-
-                        <a href="#">
-                            <li class="mb-1">Certificato di autenticità.</li>
+                        <a href="https://www.salute.gov.it/portale/home.html">
+                            <li class="mb-1"><b>Ministero della Salute</b></li>
+                        </a>
+                        <a href="https://www.salute.gov.it/portale/alcol/homeAlcol.jsp">
+                            <li class="mb-1"><b>Portale Alcol</b></li>
                         </a>
                     </ul>
                 </div>
@@ -43,9 +41,13 @@
     <div class="container-fluid bottom-footer py-2 h-100">
         <div class=" h-100 d-flex align-items-center justify-content-center linkWrapper">
             <div class="d-flex w-75 link-container align-items-center justify-content-center bottomLinkContainer">
-                <div *ngFor="let link of footerLink">
-                    <a class="col-12" href="#"><small class="footer-link">{{link}}</small></a>
-                </div>
+
+                <a class="clickable" [routerLink]="['/informativa']"><small class="footer-link">Informativa</small></a>
+                <a class="clickable" (click)="downloadPdf()"><small class="footer-link">Tabella Alcolemica</small></a>
+                <a class="clickable" [routerLink]="['/faq']"><small class="footer-link">FAQ</small></a>
+                <a class="clickable" [routerLink]="['/contatti']"><small class="footer-link">Contatti</small></a>
+
+
             </div>
         </div>
 

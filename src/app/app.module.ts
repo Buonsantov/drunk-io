@@ -21,6 +21,8 @@ import { DirectivesModule } from './_core/directives/directives.module';
 import { ProfiliComponent } from './_core/components/profili/profili.component';
 import { CookieComponent } from './_core/components/cookie/cookie.component';
 import { HomeComponent } from './_core/components/home/home.component';
+import { FaqComponent } from './_core/components/faq/faq.component';
+import { ContattiComponent } from './_core/components/contatti/contatti.component';
 
 
 require('moment/moment.js');
@@ -39,6 +41,8 @@ export function appInit(appConfigService: ConfigService) {
         ProfiliComponent,
         CookieComponent,
         HomeComponent,
+        FaqComponent,
+        ContattiComponent,
     ],
     imports: [
         BrowserModule,

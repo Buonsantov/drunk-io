@@ -13,6 +13,8 @@ import { TestFormResolverComponent } from './_core/components/test/test-form-res
 import { InformativaGuard } from './_core/guard/informativa.guard';
 import { CONSTANTS } from './_shared/constants';
 import { ProfiloGuard } from './_core/guard/profilo.guard';
+import { FaqComponent } from './_core/components/faq/faq.component';
+import { ContattiComponent } from './_core/components/contatti/contatti.component';
 
 const routes: Routes = [
 
@@ -40,6 +42,8 @@ const routes: Routes = [
 
   },
   { path: 'informativa', component: CookieComponent },
+  { path: 'faq', component: FaqComponent },
+  { path: 'contatti', component: ContattiComponent },
   { path: '**', redirectTo: CONSTANTS.PATH_SITE },
 ];
 
