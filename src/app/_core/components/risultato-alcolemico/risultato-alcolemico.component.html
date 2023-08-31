@@ -2,7 +2,111 @@
 
     <h3 class="p-5 title-drunk">Risultato Alcolemico</h3>
 
-    {{tasso}}
-    <button class="btn btn-sm btn-primary" (click)="backCalcolo()">Indietro</button>
+
+    <div class="row mb-5 w-100 card-center" id="contatti">
+        <div class="col-12 col-lg-6">
+            <!--start card-->
+            <div class="card-wrapper card-space">
+                <div class="card card-bg card-big no-after">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-start">
+                            <div class="pt-2">
+                                <button class="btn btn-sm center-item p-0" placement="top" ngbTooltip="Indietro">
+                                    <svg style="fill: #0059B3;" class="icon" (click)="backCalcolo()">
+                                        <use href="/bootstrap-italia/dist/svg/sprites.svg#it-arrow-left-circle"
+                                            xlink:href="/bootstrap-italia/dist/svg/sprites.svg#it-tool">
+                                        </use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="m-2">
+                                <h3 class="card-title h5 pt-1" *ngIf="tasso <= 0.4">Il tuo tasso alcolemico è <b
+                                        style="color: rgb(0, 128, 0);">Buono.</b></h3>
+                                <h3 class="card-title h5 pt-1" *ngIf="tasso > 0.40 && tasso <= 0.50">Il tuo tasso
+                                    alcolemico è <b style="color: rgb(207, 135, 0);">al Limite.</b></h3>
+                                <h3 class="card-title h5 pt-1" *ngIf="tasso > 0.50 ">Il tuo tasso alcolemico è <b
+                                        style="color: rgb(197, 0, 0);">Sopra il Limite.</b></h3>
+
+                            </div>
+                        </div>
+
+                        <div id="body" class="m-4 ms-5 row w-100">
+                            <div class="col-12" style="text-align-last: center;">
+                                <div  *ngIf="tasso <= 0.4">
+                                    <img class="img img-drunk" src="/assets/img/good.jpg" alt="image">
+                                    <p>Tasso Alcolemico: <b style="color: rgb(0, 128, 0);">{{tasso}}</b></p>
+                                </div>
+                                <div  *ngIf="tasso > 0.40 && tasso <= 0.50">
+                                    <img class="img img-drunk" src="/assets/img/mid.jpg" alt="image">
+                                    <p>Tasso Alcolemico: <b style="color: rgb(207, 135, 0);">{{tasso}}</b></p>
+                                </div>
+                                <div  *ngIf="tasso > 0.50 ">
+                                    <img class="img img-drunk" src="/assets/img/angry.jpg" alt="image">
+                                    <p>Tasso Alcolemico: <b  style="color: rgb(197, 0, 0);">{{tasso}}</b></p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="col-12">
+                                <div class="callout">
+                                    <div class="callout-inner">
+                                        <div class="callout-title">
+                                            <div class="callout-title-sub">
+                                                <svg class="icon">
+                                                    <use href="/bootstrap-italia/dist/svg/sprites.svg#it-info-circle">
+                                                    </use>
+                                                </svg>
+                                                <span class="visually-hidden">Effetti</span>
+                                                <span class="text">Effetti</span>
+                                            </div>
+                                        </div>
+                                        <div [innerHTML]="result?.effetti"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="callout warning">
+                                    <div class="callout-inner">
+                                        <div class="callout-title">
+                                            <div class="callout-title-sub">
+                                                <svg class="icon">
+                                                    <use href="/bootstrap-italia/dist/svg/sprites.svg#it-help-circle">
+                                                    </use>
+                                                </svg>
+                                                <span class="visually-hidden">Sensazioni</span>
+                                                <span class="text">Sensazioni</span>
+                                            </div>
+                                        </div>
+                                        <div [innerHTML]="result?.sensazione"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="callout danger">
+                                    <div class="callout-inner">
+                                        <div class="callout-title">
+                                            <div class="callout-title-sub">
+                                                <svg class="icon">
+                                                    <use href="/bootstrap-italia/dist/svg/sprites.svg#it-close-circle">
+                                                    </use>
+                                                </svg>
+                                                <span class="visually-hidden">Sanzioni</span>
+                                                <span class="text">Sanzioni</span>
+                                            </div>
+                                        </div>
+                                        <div [innerHTML]="result?.sanzioni"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--end card-->
+        </div>
+    </div>
 
 </div>

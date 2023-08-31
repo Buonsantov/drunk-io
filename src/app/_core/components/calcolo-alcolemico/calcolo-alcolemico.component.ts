@@ -25,6 +25,7 @@ export class CalcoloAlcolemicoComponent implements OnInit {
     private libToastService: DrunkLibToastService,
     private cookieDrunkService: CookieDrunkService,
   ) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     this.user = this.cookieDrunkService.getProfiloSelezionato();
   }
 
@@ -75,21 +76,24 @@ export class CalcoloAlcolemicoComponent implements OnInit {
   calcolo() {
 
     let tassoCalcolato = 0;
-    this.drinkSelected.forEach((e: any) => {
-      const val = this.tabella.filter((f: any) => f.nome === e.id);
-      if (val?.length === 1) {
-        const dettaglio = val[0].dettaglioAlcolici.filter((d: any) =>
-          d.kg === Number(this.user?.peso) && d.sesso === this.user?.sesso && this.stomaco === d.stomacoPieno);
-        if (dettaglio?.length) {
-          const t = dettaglio[0]?.tasso * e.num;
-          tassoCalcolato += t;
+    if (this.drinkSelected?.length) {
+      this.drinkSelected.forEach((e: any) => {
+        const val = this.tabella.filter((f: any) => f.nome === e.id);
+        if (val?.length === 1) {
+          const dettaglio = val[0].dettaglioAlcolici.filter((d: any) =>
+            d.kg === Number(this.user?.peso) && d.sesso === this.user?.sesso && this.stomaco === d.stomacoPieno);
+          if (dettaglio?.length) {
+            const t = dettaglio[0]?.tasso * e.num;
+            tassoCalcolato += t;
+          }
         }
-      }
 
-    });
-    this.tasso = tassoCalcolato;
-    console.log(this.tasso);
-    this.tassoOut.emit(this.tasso);
+      });
+      this.tasso = tassoCalcolato;
+      console.log(this.tasso);
+      this.tassoOut.emit(this.tasso);
+    }
+
   }
 
 

@@ -11,12 +11,23 @@ export class RisultatoAlcolemicoComponent implements OnInit {
   @Input() tasso!: any;
   @Output() back = new EventEmitter<boolean>();
 
+  result: any;
+
   ngOnInit(): void {
-    console.log(this.tabella);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    this.retriveCalcolo();
   }
 
   backCalcolo() {
     this.back.emit(true);
+  }
+
+  retriveCalcolo() {
+    console.log('tasso: ', this.tasso);
+    const r = this.tabella.filter((e: any) => this.tasso >= e.min && this.tasso <= e.max);
+    if (r.length) {
+      this.result = r[0];
+    }
   }
 
 

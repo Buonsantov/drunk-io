@@ -86,7 +86,7 @@
                         <div class="it-card-footer m-0 mt-5">
                             <div class="buttonContainer col-12  w-100 d-flex justify-content-end">
 
-                                <button class="btn btn-primary  mx-2 my-2 btn-md" (click)="calcolo()">Calcola</button>
+                                <button class="btn btn-primary  mx-2 my-2 btn-md" (click)="calcolo()"  [disabled]="!this.drinkSelected.length">Calcola</button>
                             </div>
                         </div>
                     </div>
