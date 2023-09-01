@@ -24,6 +24,8 @@ import { FaqComponent } from './_core/components/faq/faq.component';
 import { ContattiComponent } from './_core/components/contatti/contatti.component';
 import { CalcoloAlcolemicoComponent } from './_core/components/calcolo-alcolemico/calcolo-alcolemico.component';
 import { RisultatoAlcolemicoComponent } from './_core/components/risultato-alcolemico/risultato-alcolemico.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 require('moment/moment.js');
@@ -57,6 +59,12 @@ export function appInit(appConfigService: ConfigService) {
         NgSelectModule,
         RouterModule,
         DirectivesModule,
+        ServiceWorkerModule.register('ngsw-worker.js', {
+          enabled: environment.production,
+          // Register the ServiceWorker as soon as the application is stable
+          // or after 30 seconds (whichever comes first).
+          registrationStrategy: 'registerWhenStable:30000'
+        }),
     ],
     providers: [
         [CookieService],

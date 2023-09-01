@@ -35,7 +35,8 @@
                 "glob": "**/*",
                 "input": "./node_modules/bootstrap-italia/",
                 "output": "/bootstrap-italia/"
-              }
+              },
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -52,7 +53,9 @@
               "node_modules/jquery/dist/jquery.slim.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/bootstrap-italia/dist/js/bootstrap-italia.bundle.min.js"
-            ]
+            ],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -127,7 +130,8 @@
                 "glob": "**/*",
                 "input": "./node_modules/bootstrap-italia/",
                 "output": "/bootstrap-italia/"
-              }
+              },
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
