@@ -1,10 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { ConfigService } from './_core/services/config.service';
 import { CONSTANTS } from './_shared/constants';
-import { ModalDrunkService } from './_lib/ui-kit/_components/modal/services/modal.service';
-import { THEME_COLORS_ENUM } from './_lib/ui-kit/_models/constants';
-import { DrunkLibToastService } from './_lib/ui-kit/_components/toaster/_services/lib-toast.services';
+import { filter } from 'rxjs';
 
 
 
@@ -17,11 +15,23 @@ import { DrunkLibToastService } from './_lib/ui-kit/_components/toaster/_service
 export class AppComponent implements OnInit, OnDestroy {
 
   constructor(
-    private configFile: ConfigService
+    private configFile: ConfigService,
+    private router: Router,
   ) { }
 
   async ngOnInit() {
     console.log('#config: ', this.configFile.getConfig());
+    this.router.events
+      .pipe(filter((rs): rs is NavigationEnd => rs instanceof NavigationEnd))
+      .subscribe(event => {
+        if (
+          event.id === 1 &&
+          event.url === event.urlAfterRedirects
+        ) {
+          // Your code here for when the page is refreshd
+          this.router.navigate(['/']);
+        }
+      });
   }
 
   ngOnDestroy(): void {

@@ -33,7 +33,7 @@ export class RisultatoAlcolemicoComponent implements OnInit {
 
   retriveCalcolo() {
     console.log('tasso: ', this.tasso);
-    const r = this.tabella.filter((e: any) => this.tasso >= e.min && this.tasso <= e.max);
+    const r = this.tabella.filter((e: any) => this.tasso >= e.min && this.tasso < e.max);
     if (r.length) {
       this.result = r[0];
     }
