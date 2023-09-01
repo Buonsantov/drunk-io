@@ -26,6 +26,7 @@ import { CalcoloAlcolemicoComponent } from './_core/components/calcolo-alcolemic
 import { RisultatoAlcolemicoComponent } from './_core/components/risultato-alcolemico/risultato-alcolemico.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { AdsenseModule } from 'ng2-adsense';
 
 
 require('moment/moment.js');
@@ -59,6 +60,7 @@ export function appInit(appConfigService: ConfigService) {
         NgSelectModule,
         RouterModule,
         DirectivesModule,
+        AdsenseModule.forRoot(),
         ServiceWorkerModule.register('ngsw-worker.js', {
           enabled: environment.production,
           // Register the ServiceWorker as soon as the application is stable
