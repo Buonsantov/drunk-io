@@ -1,6 +1,6 @@
 <div *ngIf="show && tabella">
 
-    <h3 class="p-5 title-drunk">Calcolo Alcolemico</h3>
+    <h3 class="title-drunk">Calcolo Alcolemico</h3>
 
 
     <div class="row mb-5 w-100 card-center" id="contatti">
@@ -47,18 +47,18 @@
                                         <div class="d-flex center-item">
                                             <div class="clickable center-item" placement="top" ngbTooltip="Cancella"
                                                 (click)="cancella(d.id)">
-                                                <svg class="icon">
+                                                <svg class="icon icon-sm">
                                                     <use href="./bootstrap-italia/dist/svg/sprites.svg#it-delete"
                                                         xlink:href="./bootstrap-italia/dist/svg/sprites.svg#it-tool">
                                                     </use>
                                                 </svg>
                                             </div>
-                                            <div class="p-1">{{d.id}}</div>
+                                            <div class="p-1 pt-2">{{d.id}}</div>
 
                                         </div>
                                         <div>
-                                            <button class="btn btn-sm center-item" placement="top" ngbTooltip="Togli">
-                                                <svg class="icon" (click)="togli(d.id)">
+                                            <button class="btn btn-sm center-item p-1" placement="top" ngbTooltip="Togli">
+                                                <svg class="icon icon-sm" (click)="togli(d.id)">
                                                     <use href="./bootstrap-italia/dist/svg/sprites.svg#it-minus"
                                                         xlink:href="./bootstrap-italia/dist/svg/sprites.svg#it-tool">
                                                     </use>
@@ -67,8 +67,8 @@
 
                                             {{d.num}}
 
-                                            <button class="btn btn-sm center-item" placement="top"
-                                                ngbTooltip="Aggiungi"> <svg class="icon" (click)="aggiungi(d.id)">
+                                            <button class="btn btn-sm center-item p-1" placement="top"
+                                                ngbTooltip="Aggiungi"> <svg class="icon  icon-sm icon" (click)="aggiungi(d.id)">
                                                     <use href="./bootstrap-italia/dist/svg/sprites.svg#it-plus"
                                                         xlink:href="./bootstrap-italia/dist/svg/sprites.svg#it-tool">
                                                     </use>

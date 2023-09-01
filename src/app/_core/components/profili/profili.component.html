@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between" style="place-items: center;">
-    <h3 class="p-5 title-drunk">Lista Profili</h3>
+    <h3 class="title-drunk">Lista Profili</h3>
     <div class="clickable add-profile" placement="top" ngbTooltip="Aggiungi" [routerLink]="['/profilo', '0']">
         <svg class="icon-lg icon" style="fill: #0059b3;">
             <use href="./bootstrap-italia/dist/svg/sprites.svg#it-plus-circle"
@@ -8,8 +8,28 @@
     </div>
 </div>
 
-<div id="cont" class="py-3 px-5" style="margin-bottom: 150px;">
+<div id="cont" class="py-3 padding-card" style="margin-bottom: 150px;">
     <div class="row w-100" id="profili">
+
+        
+        <div class="col-12 my-2" *ngIf="profiloSelezionato()">
+            <div class="callout">
+                <div class="callout-inner">
+                    <div class="callout-title">
+                        <div class="callout-title-sub">
+                            <svg class="icon">
+                                <use href="./bootstrap-italia/dist/svg/sprites.svg#it-info-circle">
+                                </use>
+                            </svg>
+                            <span class="visually-hidden">Attenzione</span>
+                            <span class="text">Attenzione</span>
+                        </div>
+                    </div>
+                    <div>Selezionare un profilo per continuare ad utilizzare l'applicazione</div>
+                </div>
+            </div>
+        </div>
+
         <div class="col-12 col-lg-6 col-xl-4" *ngFor="let user of profili">
             <!--start card-->
             <div class="card-wrapper card-space">
@@ -17,7 +37,7 @@
                     <div class="card-body">
                         <div class="justify-content-between d-flex">
                             <div class="d-flex">
-                                <svg class="icon">
+                                <svg class="icon diplay-img-user">
                                     <use href="./bootstrap-italia/dist/svg/sprites.svg#it-user"
                                         xlink:href="./bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
                                 </svg>
@@ -38,13 +58,7 @@
                                             xlink:href="./bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
                                     </svg>
                                 </div>
-                                <div (click)="selezionaProfilo(user?.id)" placement="top" ngbTooltip="Seleziona profilo"
-                                    [ngClass]="user.profiloSelezionato ? 'disabled' : 'clickable green-fill' ">
-                                    <svg class="icon  ">
-                                        <use href="./bootstrap-italia/dist/svg/sprites.svg#it-check"
-                                            xlink:href="./bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
-                                    </svg>
-                                </div>
+
                             </div>
 
                         </div>
@@ -57,6 +71,17 @@
                                     {{user.peso}}Kg
                                 </li>
                             </ul>
+                        </div>
+
+                        <div class="it-card-footer m-0 my-5" style="justify-content: end;">
+                            <div (click)="selezionaProfilo(user?.id)" placement="top" ngbTooltip="Seleziona profilo"
+                                [ngClass]="user.profiloSelezionato ? 'disabled' : 'clickable green-fill' ">
+                                <!-- <svg class="icon  ">
+                                    <use href="./bootstrap-italia/dist/svg/sprites.svg#it-check"
+                                        xlink:href="./bootstrap-italia/dist/svg/sprites.svg#it-tool"></use>
+                                </svg> -->
+                                <button class="btn btn-sm btn-primary"  [ngClass]="user.profiloSelezionato ? 'disabled' : '' ">Seleziona Profilo</button>
+                            </div>
                         </div>
                     </div>
                 </div>

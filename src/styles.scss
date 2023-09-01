@@ -10,12 +10,12 @@
     margin-left: 5%;
     .callout-inner {
         padding: 1.1rem 2.222rem;
-        border: 2px solid;;
+        border: 2px solid;
         border-color: #5d7083;
         margin: 1.75rem 0 1rem;
         border-radius: 15px;
     }
-    .callout-title-sub{
+    .callout-title-sub {
         background: white;
         width: max-content;
     }
@@ -29,22 +29,40 @@
     width: 0;
 }
 
-.title-drunk{
-    color: #0059b3
+.title-drunk {
+    color: #0059b3;
+    padding: 5vw;
 }
 
-.card-center{
+@media screen and (max-width: 400px) {
+    .card-body {
+        padding: 5vw !important;
+    }
+
+    .diplay-img-user {
+        display: none;
+    }
+}
+@media screen and (min-width: 992px) {
+    .container-app-fix-sm {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        padding-top: 30px;
+    }
+}
+
+.card-center {
     place-content: center;
 }
 
-.label-select{
+.label-select {
     padding-bottom: 15px;
 }
 
-ng-select{
+ng-select {
     margin-top: 10px;
 }
 
-textarea{
+textarea {
     border: 1px solid;
 }

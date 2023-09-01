@@ -10,7 +10,7 @@
 .add-profile{
     
     place-items: center;
-    margin-right: 3vw;
+    padding-right: 5vw;
 
 }
 
@@ -22,3 +22,25 @@
     padding: 48px;
     padding-bottom: 0;
 }
+
+@media screen and (max-width: 400px) {
+    .card-body{
+        padding: 5vw!important;
+    }
+
+    .diplay-img-user{
+        display: none;
+    }
+}
+.padding-card{
+    padding: 0px 5vw;
+}
+@media screen and (max-width: 600px) {
+    .padding-card{
+        padding: 0px 15px;
+    }
+}
+
+
+
+

@@ -35,6 +35,10 @@ export class ProfiliComponent implements OnInit {
     return sesso === 'M' ? 'Uomo' : 'Donna';
   }
 
+  profiloSelezionato(){
+    return !this.cookieDrunkService.getProfiloSelezionato();
+  }
+
   selezionaProfilo(id: string) {
     this.cookieDrunkService.setProfiloSelezionato(id);
     this.libToastService.okToast('Profilo selezionato correttamente');
