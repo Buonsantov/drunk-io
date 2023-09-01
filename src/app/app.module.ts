@@ -68,6 +68,7 @@ export function appInit(appConfigService: ConfigService) {
     ],
     providers: [
         [CookieService],
+        { provide: APP_BASE_HREF, useValue: '/app-drunk-io'},
         { provide: APP_INITIALIZER, useFactory: appInit, multi: true, deps: [ConfigService] }
 
     ],

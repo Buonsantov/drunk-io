@@ -24,7 +24,7 @@ export class CookieDrunkService {
   salvaInfo(info: boolean, cookie: boolean) {
     this.cookieInfo = { info, cookie };
     const objectString = JSON.stringify(this.cookieInfo);
-    this.cookieService.set('Informativa', objectString);
+    this.cookieService.set('Informativa', objectString, 30);
   }
 
   recuperaInfo() {
@@ -85,7 +85,7 @@ export class CookieDrunkService {
 
   setUsers(users: Users) {
     const objectString = JSON.stringify(users);
-    this.cookieService.set('Users', objectString);
+    this.cookieService.set('Users', objectString, 30);
   }
 
   getUsers() {

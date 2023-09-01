@@ -1,7 +1,7 @@
 {
     "response": [
         {
-            "nome": "Birra analcolica",
+            "nome": "Birra analcolica 0.50°",
             "gradazione": 0.50,
             "dettaglioAlcolici": [
                 {
@@ -151,7 +151,7 @@
             ]
         },
         {
-            "nome": "Birra leggera",
+            "nome": "Birra leggera 3.5°",
             "gradazione": 3.50,
             "dettaglioAlcolici": [
                 {
@@ -301,7 +301,7 @@
             ]
         },
         {
-            "nome": "Birra normale",
+            "nome": "Birra normale 5°",
             "gradazione": 5.00,
             "dettaglioAlcolici": [
                 {
@@ -451,7 +451,7 @@
             ]
         },
         {
-            "nome": "Birra speciale",
+            "nome": "Birra speciale 8°",
             "gradazione": 8.00,
             "dettaglioAlcolici": [
                 {
@@ -601,7 +601,7 @@
             ]
         },
         {
-            "nome": "Birra doppio malto",
+            "nome": "Birra doppio malto 10°",
             "gradazione": 10.00,
             "dettaglioAlcolici": [
                 {
@@ -751,7 +751,7 @@
             ]
         },
         {
-            "nome": "Vino",
+            "nome": "Vino 12°",
             "gradazione": 12.00,
             "dettaglioAlcolici": [
                 {
@@ -901,7 +901,7 @@
             ]
         },
         {
-            "nome": "Vini liquorosi-aperitivi",
+            "nome": "Vini liquorosi-aperitivi 18°",
             "gradazione": 18.00,
             "dettaglioAlcolici": [
                 {
@@ -1801,7 +1801,7 @@
             ]
         },
         {
-            "nome": "Champagne/Spumante",
+            "nome": "Champagne/Spumante 11°",
             "gradazione": 11.00,
             "dettaglioAlcolici": [
                 {
@@ -2101,7 +2101,7 @@
             ]
         },
         {
-            "nome": "Ready to Drink",
+            "nome": "Ready to Drink 5°",
             "gradazione": 5,
             "dettaglioAlcolici": [
                 {
