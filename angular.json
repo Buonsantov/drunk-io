@@ -174,9 +174,5 @@
         }
       }
     }
-  },
-  "defaultProject": "drunk-io",
-  "cli": {
-    "analytics": false
   }
 }
