@@ -9,42 +9,42 @@
         },
         {
             "min": 0.1,
-            "max": 0.3,
+            "max": 0.29,
             "sanzioni": "Per i minori di 18 anni sorpresi alla guida di un motorino o minicar, il conducente non potrà conseguire la patente prima del compimento del diciannovesimo anno di età, qualora sia stato accertato un tasso alcolemico superiore a 0,0 (zero) e non superiore a 0,5 g/l il termine si sposta al compimento del ventunesimo anno di età, qualora sia stato accertato un tasso alcolemico superiore a 0,5 g/l. <br> qualora sia stato accertato un valore corrispondente ad un tasso alcolemico superiore a 0 (zero) e non superiore a 0,5 gr/l per alcune categorie di conducenti: per chi ha meno di 21 anni o ha conseguito la patente da meno di 3 anni e per i guidatori professionali e i conducenti di veicoli per il trasporto di persone o cose con massa a pieno carico superiore a 3,5 tonnellate: sanzione amministrativa da 155 a 624 euro In aggiunta alla sanzione prevista",
             "sensazione": "Iniziale sensazione di ebrezza.<br> Iniziale riduzione delle inibizioni e del controllo",
             "effetti": "Affievolimento della vigilanza, attenzione e controllo.<br> Iniziale riduzione del coordinamento motorio.<br> Iniziale riduzione della visione laterale.<br> Nausea"
         },
         {
             "min": 0.3,
-            "max": 0.5,
+            "max": 0.49,
             "sanzioni": "Per i minori di 18 anni sorpresi alla guida di un motorino o minicar, il conducente non potrà conseguire la patente prima del compimento del diciannovesimo anno di età, qualora sia stato accertato un tasso alcolemico superiore a 0,0 (zero) e non superiore a 0,5 g/l il termine si sposta al compimento del ventunesimo anno di età, qualora sia stato accertato un tasso alcolemico superiore a 0,5 g/l. <br> qualora sia stato accertato un valore corrispondente ad un tasso alcolemico superiore a 0 (zero) e non superiore a 0,5 gr/l per alcune categorie di conducenti: per chi ha meno di 21 anni o ha conseguito la patente da meno di 3 anni e per i guidatori professionali e i conducenti di veicoli per il trasporto di persone o cose con massa a pieno carico superiore a 3,5 tonnellate: sanzione amministrativa da 155 a 624 euro In aggiunta alla sanzione prevista",
             "sensazione": "Sensazione di ebrezza. Riduzione delle inibizioni, del controllo e della percezione del rischio.",
             "effetti": "Riduzione delle capacità di vigilanza, attnzione e controllo. <br> Riduzione del coordinamento motorio e dei riflessi. <br> Riduzione della visione laterale. <br> Vomito."
         },
         {
             "min": 0.5,
-            "max": 0.9,
+            "max": 0.89,
             "sanzioni": "Decurtazione di 10 punti dalla patente e ammenda da 500 a 2.000 euro, sospensione patente da 3 a 6 mesi.",
             "sensazione": "Cambiamenti dell'umore. <br> Nausea, sonnolenza. <br> Stato di eccitazione emotiva.",
             "effetti": "Riduzione della capacità di giudizio. <br> Riduzione della capacità di individuare oggetti inmovimento e della visione laterale. <br> Riflessi alterati. <br> Alterazione delle capacità di reazione agli stimoli sonori e luminosi. <br> Vomito"
         },
         {
             "min": 0.9,
-            "max": 1.6,
+            "max": 1.59,
             "sanzioni": "Decurtazione di 10 punti dalla patente e  ammenda da 800 a 3200 euro, arresto fino da tre mesi ad un anno, sospensione patente da 6 mesi ad 1 anno.",
             "sensazione": "Alterazione dell'umore. <br> Rabbia. <br> Tristezza. <br> Confusione mentale, disorientamento.",
             "effetti": "Compromissione della capacità di giudizio e di autocontrollo. <br> Comportamenti socialmente inadeguati. <br> Linguaggio mal articolato. <br> Compromissione della visione, della percezione di forme, colori, dimentioni. <br> Vomito"
         },
         {
             "min": 1.6,
-            "max": 3.1,
+            "max": 3,
             "sanzioni": "Decurtazione di 10 punti dalla patente e   ammenda da 1500 a 6000 euro, arresto da 6 mesi ad un anno, sospensione patente da 1 a 2 anni, se il veicolo appartiene a persona estranea al reato, la durata della sospensione della patente è raddoppiata, se il conducente in stato di ebbrezza provoca un incidente stradale le sanzioni sono raddoppiate ed è disposto il fermo amministrativo del veicolo per 180 giorni, salvo che il veicolo appartenga a persona estranea all'illecito.",
             "sensazione": "Stordimento. <br> Aggressività. <br> Stato depressivo. <br> Apatia. <br> Letargia. ",
             "effetti": "Compromissione grave dello stato psicofisico. <br> Comportamenti aggressivi e violenti. <br> Difficoltà marcata a stare in piedi e camminare. <br> Stato di inerzia generale. <br> Ipotermia. <br> Vomito."
         },
         {
             "min": 3.1,
-            "max": 4.1,
+            "max": 4,
             "sanzioni": "Decurtazione di 10 punti dalla patente e   ammenda da 1500 a 6000 euro, arresto da 6 mesi ad un anno, sospensione patente da 1 a 2 anni, se il veicolo appartiene a persona estranea al reato, la durata della sospensione della patente è raddoppiata, se il conducente in stato di ebbrezza provoca un incidente stradale le sanzioni sono raddoppiate ed è disposto il fermo amministrativo del veicolo per 180 giorni, salvo che il veicolo appartenga a persona estranea all'illecito.",
             "sensazione": "Stato di incoscienza",
             "effetti": "Allucinazioni. <br> Cessazione dei riflessi. <br> Incontinenza. <br> Vomito. <br> Coma con possibilità di morte per soffocamento da vomito."
