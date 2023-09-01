@@ -91,9 +91,25 @@ export class CalcoloAlcolemicoComponent implements OnInit {
       });
       this.tasso = tassoCalcolato;
       console.log(this.tasso);
+      this.salvaAndamento(this.tasso);
       this.tassoOut.emit(this.tasso);
     }
 
+  }
+
+
+  salvaAndamento(tasso: number) {
+    const user = this.cookieDrunkService.getProfiloSelezionato();
+    let andamento = user?.bevute;
+    if (!andamento || !andamento?.length) {
+      andamento = [] as any;
+    }
+    const bevuta = { data: new Date(), grado: tasso };
+    andamento?.push(bevuta);
+    if (user) {
+      user.bevute = andamento;
+      this.cookieDrunkService.setUser(user);
+    }
   }
 
 

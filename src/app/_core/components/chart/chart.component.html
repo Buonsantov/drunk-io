@@ -1,0 +1,21 @@
+<h3 class="title-drunk">Andamento</h3>
+
+<div class="card-wrapper p-3 card-space">
+    <div class="card card-bg card-big no-after">
+        <div class="card-body">
+            <h3 class="card-title h5 ">Tieni sotto controllo i tuoi livelli</h3>
+            <ng-select #MyNgSelect [searchable]="false" [clearable]="false" required (change)="handlerChange($event)"
+                [(ngModel)]="filtro" name="filtro" title="filtro" id="filtro" #filtroModel="ngModel">
+                <ng-option [value]="sel.val" *ngFor="let sel of valoriFiltro">{{sel.label}}</ng-option>
+            </ng-select>
+
+            <div class="w-100">
+                <canvas #lineCanvas style="position: relative; height:40vh; width:80vw"></canvas>
+                <hr color="red">
+                <div class="w-100 d-flex justify-content-center">
+                    <button class="btn btn-danger btn-sm" (click)="deleteAll()">Cancella tutti i dati</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

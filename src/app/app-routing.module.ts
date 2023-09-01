@@ -10,6 +10,7 @@ import { CONSTANTS } from './_shared/constants';
 import { ProfiloGuard } from './_core/guard/profilo.guard';
 import { FaqComponent } from './_core/components/faq/faq.component';
 import { ContattiComponent } from './_core/components/contatti/contatti.component';
+import { ChartComponent } from './_core/components/chart/chart.component';
 
 const routes: Routes = [
 
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: '', component: HomeComponent, canActivate: [ProfiloGuard] },
       { path: 'profilo/:id', component: ProfiloComponent },
       { path: 'profili', component: ProfiliComponent },
+      { path: 'chart', component: ChartComponent },
     ]
 
   },

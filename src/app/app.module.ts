@@ -26,6 +26,7 @@ import { CalcoloAlcolemicoComponent } from './_core/components/calcolo-alcolemic
 import { RisultatoAlcolemicoComponent } from './_core/components/risultato-alcolemico/risultato-alcolemico.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ChartComponent } from './_core/components/chart/chart.component';
 
 
 require('moment/moment.js');
@@ -48,6 +49,7 @@ export function appInit(appConfigService: ConfigService) {
         ContattiComponent,
         CalcoloAlcolemicoComponent,
         RisultatoAlcolemicoComponent,
+        ChartComponent,
     ],
     imports: [
         BrowserModule,
