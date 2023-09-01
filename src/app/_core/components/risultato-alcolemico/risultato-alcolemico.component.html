@@ -34,15 +34,15 @@
                             <div class="col-12" style="text-align-last: center;">
                                 <div  *ngIf="tasso <= 0.4">
                                     <img class="img img-drunk" src="./assets/img/good.jpg" alt="image">
-                                    <p>Tasso Alcolemico: <b style="color: rgb(0, 128, 0);">{{tasso}}</b></p>
+                                    <p>Tasso Alcolemico: <b style="color: rgb(0, 128, 0);">{{trim(tasso)}}</b></p>
                                 </div>
                                 <div  *ngIf="tasso > 0.40 && tasso <= 0.50">
                                     <img class="img img-drunk" src="./assets/img/mid.jpg" alt="image">
-                                    <p>Tasso Alcolemico: <b style="color: rgb(207, 135, 0);">{{tasso}}</b></p>
+                                    <p>Tasso Alcolemico: <b style="color: rgb(207, 135, 0);">{{trim(tasso)}}</b></p>
                                 </div>
                                 <div  *ngIf="tasso > 0.50 ">
                                     <img class="img img-drunk" src="./assets/img/angry.jpg" alt="image">
-                                    <p>Tasso Alcolemico: <b  style="color: rgb(197, 0, 0);">{{tasso}}</b></p>
+                                    <p>Tasso Alcolemico: <b  style="color: rgb(197, 0, 0);">{{trim(tasso)}}</b></p>
                                 </div>
                                 
                             </div>

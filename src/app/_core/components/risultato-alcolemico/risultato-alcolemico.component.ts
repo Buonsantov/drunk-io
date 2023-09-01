@@ -18,6 +18,15 @@ export class RisultatoAlcolemicoComponent implements OnInit {
     this.retriveCalcolo();
   }
 
+  trim(num: number) {
+    if (num !== null && num !== undefined) {
+      return num?.toFixed(3).slice(0, -1);
+    }
+    return '';
+  }
+
+
+
   backCalcolo() {
     this.back.emit(true);
   }
