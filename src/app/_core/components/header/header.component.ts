@@ -54,4 +54,11 @@ export class HeaderComponent implements OnInit {
     return dettaglio;
   }
 
+  chiudiNav() {
+    const elem = document.getElementsByClassName('btn close-menu');
+    if (elem && elem.length) {
+      (elem[0] as any)?.click();
+    }
+  }
+
 }
