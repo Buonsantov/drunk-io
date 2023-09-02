@@ -4,7 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng s --port 4200",
-    "build": "ng build --base-href=/app-drunk-io/ --configuration production"
+    "build:ci":"ng build  --configuration production",
+    "build": "ng build --base-href=/app-drunk-io/ --configuration production",
+    "docker:build": "docker build -t drunkio:v1.0.0 -f ./Dockerfile . ",
+    "docker:tag": "docker tag drunkio:v1.0.0 buonsantovito/drunkio:v1.0.0",
+    "docker:push": "docker push buonsantovito/drunkio:v1.0.0",
+    "docker:run": "docker run -d -p 8080:8080 buonsantovito/drunkio:v1.0.0"
   },
   "private": true,
   "dependencies": {
