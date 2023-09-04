@@ -31,7 +31,7 @@
 
 .title-drunk {
     color: #0059b3;
-    padding: 5vw;
+    padding: 3vw;
 }
 
 @media screen and (max-width: 400px) {
@@ -66,3 +66,18 @@ ng-select {
 textarea {
     border: 1px solid;
 }
+
+
+#risultato .callout .callout-inner {
+    padding: 1.1rem 1rem;
+}
+
+
+/* ALTERVISTA */
+.iubenda-tp-alert-btn[data-tp-float]:not([data-tp-anchored]), .iubenda-tp-btn[data-tp-float]:not([data-tp-anchored]), .iubenda-uspr-btn[data-tp-float]:not([data-tp-anchored]) {
+    margin: 1rem 24px !important;
+}
+.iubenda-tp-btn[data-tp-float]:not([data-tp-anchored]){
+    margin: 1rem 24px !important;
+}
+/* FINE */

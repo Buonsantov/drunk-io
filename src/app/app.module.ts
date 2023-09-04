@@ -27,6 +27,7 @@ import { RisultatoAlcolemicoComponent } from './_core/components/risultato-alcol
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ChartComponent } from './_core/components/chart/chart.component';
+import { DrunkioPresentazioneComponent } from './_core/components/drunkio-presentazione/drunkio-presentazione.component';
 
 
 require('moment/moment.js');
@@ -50,6 +51,7 @@ export function appInit(appConfigService: ConfigService) {
         CalcoloAlcolemicoComponent,
         RisultatoAlcolemicoComponent,
         ChartComponent,
+        DrunkioPresentazioneComponent,
     ],
     imports: [
         BrowserModule,
@@ -70,7 +72,7 @@ export function appInit(appConfigService: ConfigService) {
     ],
     providers: [
         [CookieService],
-        { provide: APP_BASE_HREF, useValue: '/app-drunk-io'},
+        { provide: APP_BASE_HREF, useValue: '/'},
         { provide: APP_INITIALIZER, useFactory: appInit, multi: true, deps: [ConfigService] }
 
     ],

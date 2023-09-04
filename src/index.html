@@ -17,10 +17,52 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#1976d2">
+
+  <!-- Cookie Altervista -->
+
+  <link rel="preload" as="script" href="https://cdn.iubenda.com/cs/iubenda_cs.js" />
+  <link rel="preload" as="script" href="https://cdn.iubenda.com/cs/tcf/stub-v2.js" />
+  <script src="https://cdn.iubenda.com/cs/tcf/stub-v2.js"></script>
+  <script>
+      (_iub = self._iub || []).csConfiguration = {
+      cookiePolicyId: 58746971,
+      siteId: 3298069,
+      localConsentDomain: 'drunkio.altervista.org',
+      timeoutLoadConfiguration: 30000,
+      lang: 'it',
+      enableTcf: true,
+      tcfVersion: 2,
+      tcfPurposes: {
+        "2": "consent_only",
+        "3": "consent_only",
+        "4": "consent_only",
+        "5": "consent_only",
+        "6": "consent_only",
+        "7": "consent_only",
+        "8": "consent_only",
+        "9": "consent_only",
+        "10": "consent_only"
+      },
+      invalidateConsentWithoutLog: true,
+      googleAdditionalConsentMode: true,
+      consentOnContinuedBrowsing: true,
+      banner: {
+        position: "bottom",
+        acceptButtonDisplay: true,
+        customizeButtonDisplay: true,
+        closeButtonDisplay: true,
+        closeButtonRejects: true,
+        fontSizeBody: "14px",
+      },
+    }
+  </script>
+  <script async src="https://cdn.iubenda.com/cs/iubenda_cs.js"></script>
+  <!-- Fine -->
 </head>
 
 <body>
   <app-root></app-root>
+  <script>!function (d, l, e, s, c) { e = d.createElement("script"); e.src = "//ad.altervista.org/js.ad/size=300X250/?ref=" + encodeURIComponent(l.hostname + l.pathname) + "&r=" + Date.now(); s = d.scripts; c = d.currentScript || s[s.length - 1]; c.parentNode.insertBefore(e, c) }(document, location)</script>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 
