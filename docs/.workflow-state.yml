@@ -1,0 +1,46 @@
+app_name: drunk-io
+scope: FE-only
+stack:
+  frontend: angular
+  backend: none
+has_codebase: true
+codebase_path: C:\Git\personal\drunk-io
+has_contract_docs: false
+phases:
+  codebase_baseline:
+    status: completed
+    artifact: docs/requirements/drunk-io-codebase-baseline.md
+  requirements:
+    status: completed
+    artifact: docs/requirements/drunk-io-requirements.md
+  domain_model:
+    status: completed
+    artifact: docs/architecture/drunk-io-domain-model.md
+  system_architecture:
+    status: completed
+    artifact: docs/architecture/drunk-io-system-architecture.md
+  functional_analysis:
+    status: completed
+    artifact: docs/analysis/drunk-io-functional-analysis.md
+  analysis:
+    status: completed
+    artifact: docs/analysis/drunk-io-analysis.md
+  use_cases:
+    status: completed
+    artifact: docs/analysis/drunk-io-use-cases.md
+  frontend_requirements:
+    status: completed
+    artifact: docs/requirements/drunk-io-frontend-requirements.md
+  frontend_analysis:
+    status: completed
+    artifact: docs/analysis/drunk-io-frontend-analysis.md
+  frontend_use_cases:
+    status: completed
+    artifact: docs/analysis/drunk-io-frontend-use-cases.md
+  frontend_prototype:
+    status: completed
+    artifact: docs/prototypes/drunk-io-frontend-prototype.md
+last_updated: 2025-07-09
+gate_a1_approved: true
+gate_a_approved: true
+gate_d_approved: true

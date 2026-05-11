@@ -1,19 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { GoUpButtonComponent } from './go-up-button.component';
+import { UtilityService } from '../../../_services/utility.service';
 
 describe('GoUpButtonComponent', () => {
   let component: GoUpButtonComponent;
   let fixture: ComponentFixture<GoUpButtonComponent>;
+  let utilitySpy: jasmine.SpyObj<UtilityService>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [GoUpButtonComponent]
-    })
-      .compileComponents();
-  });
+    utilitySpy = jasmine.createSpyObj('UtilityService', ['randomNumber']);
+    utilitySpy.randomNumber.and.returnValue('test-123');
 
-  beforeEach(() => {
+    await TestBed.configureTestingModule({
+      declarations: [GoUpButtonComponent],
+      providers: [
+        { provide: UtilityService, useValue: utilitySpy },
+      ],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(GoUpButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -21,5 +25,13 @@ describe('GoUpButtonComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  describe('topFunction', () => {
+    it('dovrebbe chiamare window.scrollTo', () => {
+      const scrollSpy = spyOn(window, 'scrollTo').and.stub();
+      component.topFunction();
+      expect(scrollSpy).toHaveBeenCalled();
+    });
   });
 });

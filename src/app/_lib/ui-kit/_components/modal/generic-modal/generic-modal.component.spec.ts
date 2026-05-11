@@ -1,25 +1,24 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GenericModalDrunkComponent } from './generic-modal.component';
 
-
-describe('GenericModalComponent', () => {
+describe('GenericModalDrunkComponent', () => {
   let component: GenericModalDrunkComponent;
   let fixture: ComponentFixture<GenericModalDrunkComponent>;
+  let modalSpy: jasmine.SpyObj<NgbModal>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        declarations: [GenericModalDrunkComponent],
-        imports: [HttpClientTestingModule, RouterTestingModule, NgbModule],
-        providers: []
-      }).compileComponents();
-    })
-  );
+  beforeEach(async () => {
+    modalSpy = jasmine.createSpyObj('NgbModal', ['open', 'dismissAll']);
 
-  beforeEach(() => {
+    await TestBed.configureTestingModule({
+      declarations: [GenericModalDrunkComponent],
+      imports: [RouterTestingModule, NgbModule],
+      providers: [
+        { provide: NgbModal, useValue: modalSpy },
+      ],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(GenericModalDrunkComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -27,5 +26,12 @@ describe('GenericModalComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  describe('action', () => {
+    it('dovrebbe chiamare dismissAll', async () => {
+      await component.action(true);
+      expect(modalSpy.dismissAll).toHaveBeenCalled();
+    });
   });
 });
